@@ -1,36 +1,32 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-primary ps-3 pe-3 pt-0 pb-0">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar scroll</a>
+      <img id="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de FilmoTek">
+      <a class="navbar-brand text-white" href="{{ url_for('index') }}">FilmoTek</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <ul class="navbar-nav ms-auto me-auto my-2 my-lg-0 navbar-nav-scroll w-50 justify-content-center" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link text-white" href="{{ url_for('catalogue') }}">Catalogue</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Link
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Langue
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+            <ul class="dropdown-menu bg-primary">
+              <li><a class="dropdown-item bg-primary text-white" href="#">Français</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item bg-primary text-white" href="#">English</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Link</a>
-          </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+        <form class="d-flex w-25 me-5" role="search">
+          <input class="form-control me-2" type="search" placeholder="Rechercher un film, un acteur..." aria-label="Search">
+          <button class="btn btn-success" type="submit">Rechercher</button>
         </form>
+          <a class="btn btn-danger me-2" href="{{ url_for('register') }}">Inscription</a>
+          <a class="btn btn-success" href="{{ url_for('login') }}">Connexion</a>
       </div>
     </div>
   </nav>

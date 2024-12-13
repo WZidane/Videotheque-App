@@ -1,0 +1,11 @@
+/* NAV */
+
+#logo {
+    width: 100px;
+}
+
+/* CATALOGUE */
+
+#catalogue h1 {
+    width: fit-content;
+}
