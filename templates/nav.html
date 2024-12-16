@@ -1,32 +1,76 @@
 <nav class="navbar navbar-expand-lg bg-primary ps-3 pe-3 pt-0 pb-0">
-    <div class="container-fluid">
-      <img id="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de FilmoTek">
-      <a class="navbar-brand text-white" href="{{ url_for('index') }}">FilmoTek</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav ms-auto me-auto my-2 my-lg-0 navbar-nav-scroll w-50 justify-content-center" style="--bs-scroll-height: 100px;">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="{{ url_for('catalogue') }}">Catalogue</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Langue
-            </a>
-            <ul class="dropdown-menu bg-primary">
-              <li><a class="dropdown-item bg-primary text-white" href="#">Français</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item bg-primary text-white" href="#">English</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form class="d-flex w-25 me-5" role="search">
-          <input class="form-control me-2" type="search" placeholder="Rechercher un film, un acteur..." aria-label="Search">
-          <button class="btn btn-success" type="submit">Rechercher</button>
-        </form>
-          <a class="btn btn-danger me-2" href="{{ url_for('register') }}">Inscription</a>
-          <a class="btn btn-success" href="{{ url_for('login') }}">Connexion</a>
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="{{ url_for('index') }}"><img id="logo"
+        src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo de FilmoTek">FilmoTek</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <form class="d-flex align-items-center w-100 form-search ms-5">
+        <div class="input-group">
+          <button class="btn btn-light dropdown-toggle shadow-0" type="button" data-mdb-toggle="dropdown"
+            aria-expanded="false" style="padding-bottom: 0.4rem;">
+            All
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark fa-ul">
+            <li>
+              <a class="dropdown-item" href="#"><span class="fa-li pe-2"><i class="fas fa-film"></i></span>{{ _('Titre')
+                }}</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"><span class="fa-li pe-2"><i class="fas fa-tv"></i></span>TV
+                Episodes</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"><span class="fa-li pe-2"><i
+                    class="fas fa-user-friends"></i></span>Celebs</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"><span class="fa-li pe-2"><i
+                    class="fas fa-building"></i></span>Companies</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"><span class="fa-li pe-2"><i class="fas fa-key"></i></span>Keywords</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"><span class="fa-li pe-2"><i
+                    class="fas fa-search-plus"></i></span>Advanced
+                search<i class="fas fa-chevron-right ps-2"></i></a>
+            </li>
+          </ul>
+          <input type="search" class="form-control" placeholder="{{ _('Rechercher...') }}" />
+        </div>
+        <a href="#!" class="text-white"><i class="fas fa-search ps-3"></i></a>
+      </form>
+      <ul class="navbar-nav ms-auto me-auto my-2 my-lg-0 navbar-nav-scroll w-25 ps-3 pe-3 justify-content-around"
+        style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{{ url_for('catalogue') }}">{{ _('Catalogue') }}</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            {{ _('Langue') }}
+          </a>
+          <ul class="dropdown-menu bg-primary">
+            <li><a class="dropdown-item bg-primary text-white" href="{{ url_for('change_language', lang='fr') }}">{{
+                _('Français') }}</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item bg-primary text-white" href="{{ url_for('change_language', lang='en') }}">{{
+                _('Anglais') }}</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="d-flex w-25 justify-content-around">
+        <a class="btn btn-danger me-2" href="{{ url_for('register') }}">{{ _('Inscription') }}</a>
+        <a class="btn btn-success" href="{{ url_for('login') }}">{{ _('Connexion') }}</a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>

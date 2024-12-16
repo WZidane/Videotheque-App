@@ -1,0 +1,51 @@
+# Translations template for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-12-16 18:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: templates/nav.html:18
+msgid "Titre"
+msgstr ""
+
+#: templates/nav.html:45
+msgid "Rechercher..."
+msgstr ""
+
+#: templates/nav.html:52
+msgid "Catalogue"
+msgstr ""
+
+#: templates/nav.html:57
+msgid "Langue"
+msgstr ""
+
+#: templates/nav.html:61
+msgid "Français"
+msgstr ""
+
+#: templates/nav.html:66
+msgid "Anglais"
+msgstr ""
+
+#: templates/nav.html:71
+msgid "Inscription"
+msgstr ""
+
+#: templates/nav.html:72
+msgid "Connexion"
+msgstr ""
+
