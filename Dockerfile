@@ -4,10 +4,6 @@ RUN apt-get update
 
 WORKDIR /app
 
-RUN pip install --no-cache-dir flask
-
-RUN pip install requests
-
-RUN pip install python-dotenv
+RUN pip install --no-cache-dir flask flask-babel requests python-dotenv
 
 COPY . .
