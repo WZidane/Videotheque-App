@@ -1,11 +1,66 @@
+/* VARIABLES */
+:root {
+    --background-parallax: url('');
+}
+
 /* NAV */
 
 #logo {
     width: 100px;
 }
 
+/* ACCUEIL */
+
+.spacing-block {
+    position: relative;
+    margin: -40vh 0 22vh 12%;
+}
+
+.h-300 {
+    min-height: 500px;
+    height: calc(100vh/2.5);
+}
+
+.parallax::before {
+    content: "";
+    display: flex;
+    background: var(--background-parallax) center / cover no-repeat fixed;
+    filter: blur(5px);
+    height: 100%;
+    z-index: -1;
+}
+
+.parallax:nth-last-of-type(5) {
+    --background-parallax: url('../../static/img/popcorn.jpg');
+}
+
+.parallax:nth-last-of-type(2) {
+    --background-parallax: url('../../static/img/theater.jpg');
+}
+
 /* CATALOGUE */
 
 #catalogue h1 {
     width: fit-content;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: -3.9vh;
+}
+
+@media screen and (max-width: 800px) {
+
+    /* ACCUEIL */
+
+    .spacing-block {
+        position: relative;
+        margin: -28vh 0 20vh 12%;
+    }
+
+    .h-300 {
+        max-height: 300px;
+        height: calc(100vh/2.5);
+    }
 }

@@ -1,18 +1,34 @@
 {% extends "base.html" %}
 
-{% block title %} 
+{% block title %}
 
-Moviefy - Accueil 
+Moviefy - Accueil
 
 {% endblock %}
 
 {% block nav %}
-    {% include "nav.html" %}
+{% include "nav.html" %}
 {% endblock %}
 
 {% block content %}
+<div class="d-flex flex-column w-100">
+    <div class="w-100 h-300 parallax"></div>
+    <div class="w-50 bg-primary bg-gradient spacing-block p-5 text-white rounded">
+        <h1>Bienvenue,</h1>
+        <h2>Chez votre vidéothèque préférée !</h2>
+    </div>
+    <div class="d-flex flex-column w-100 h-300">
+        <h3>Tendances</h3>
+    </div>
+    <div class="w-100 h-300 parallax"></div>
+    <div class="w-50 bg-primary bg-gradient spacing-block p-5 text-white rounded">
+        <h3>Newsletter</h3>
+        <p>Venez découvrir toutes nos nouveautés ! Restez informer !</p>
+        <button class="btn btn-success text-white w-25">Je m'abonne !</button>
+    </div>
+</div>
 {% endblock %}
 
 {% block footer %}
-    {% include "footer.html" %}
+{% include "footer.html" %}
 {% endblock %}
