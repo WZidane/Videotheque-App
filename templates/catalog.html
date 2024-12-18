@@ -2,7 +2,7 @@
 
 {% block title %}
 
-Moviefy - Catalogue
+Moviefy - {{ _('Catalog') }}
 
 {% endblock %}
 
@@ -12,11 +12,11 @@ Moviefy - Catalogue
 
 {% block content %}
     <div id="catalogue" class="p-5">
-        <h1 class="m-auto">Catalogue</h1>
+        <h1 class="m-auto">{{ _('Catalog') }}</h1>
 
         <form class="d-flex w-50 ms-auto me-auto mt-5" role="search">
-            <input class="form-control me-2" type="search" placeholder="Rechercher un film, un acteur..." aria-label="Rechercher">
-            <button class="btn btn-success" type="submit">Rechercher</button>
+            <input class="form-control me-2" type="search" placeholder="{{ _('Looking for a movie') }}">
+            <button class="btn btn-success" type="submit">{{ _('Search') }}</button>
         </form>
 
         <hr class="w-75 mt-5 m-auto">

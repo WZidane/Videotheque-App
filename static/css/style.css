@@ -11,11 +11,6 @@
 
 /* ACCUEIL */
 
-.spacing-block {
-    position: relative;
-    margin: -40vh 0 22vh 12%;
-}
-
 .h-300 {
     min-height: 500px;
     height: calc(100vh/2.5);
@@ -30,11 +25,11 @@
     z-index: -1;
 }
 
-.parallax:nth-last-of-type(5) {
+.parallax:first-of-type {
     --background-parallax: url('../../static/img/popcorn.jpg');
 }
 
-.parallax:nth-last-of-type(2) {
+.parallax:last-of-type {
     --background-parallax: url('../../static/img/theater.jpg');
 }
 
@@ -48,19 +43,4 @@
 
 footer {
     margin-top: -3.9vh;
-}
-
-@media screen and (max-width: 800px) {
-
-    /* ACCUEIL */
-
-    .spacing-block {
-        position: relative;
-        margin: -28vh 0 20vh 12%;
-    }
-
-    .h-300 {
-        max-height: 300px;
-        height: calc(100vh/2.5);
-    }
 }

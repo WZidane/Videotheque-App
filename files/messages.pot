@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-16 18:32+0000\n"
+"POT-Creation-Date: 2024-12-18 10:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,35 +17,155 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: templates/nav.html:18
-msgid "Titre"
+#: templates/catalog.html:5 templates/catalog.html:15 templates/nav.html:26
+msgid "Catalog"
 msgstr ""
 
-#: templates/nav.html:45
-msgid "Rechercher..."
+#: templates/catalog.html:18
+msgid "Looking for a movie"
 msgstr ""
 
-#: templates/nav.html:52
-msgid "Catalogue"
+#: templates/catalog.html:19 templates/nav.html:19
+msgid "Search"
 msgstr ""
 
-#: templates/nav.html:57
-msgid "Langue"
+#: templates/contact.html:5 templates/contact.html:17
+msgid "Contact"
 msgstr ""
 
-#: templates/nav.html:61
-msgid "Français"
+#: templates/contact.html:18
+msgid "Please contact us"
 msgstr ""
 
-#: templates/nav.html:66
-msgid "Anglais"
+#: templates/contact.html:23 templates/contact.html:24
+msgid "First Name"
 msgstr ""
 
-#: templates/nav.html:71
-msgid "Inscription"
+#: templates/contact.html:31 templates/contact.html:32
+msgid "Last Name"
 msgstr ""
 
-#: templates/nav.html:72
-msgid "Connexion"
+#: templates/contact.html:39 templates/contact.html:40 templates/login.html:23
+#: templates/login.html:24 templates/register.html:31
+#: templates/register.html:32
+msgid "Email"
+msgstr ""
+
+#: templates/contact.html:46
+msgid "Message"
+msgstr ""
+
+#: templates/contact.html:50
+msgid "Send"
+msgstr ""
+
+#: templates/footer.html:3 templates/index.html:5
+msgid "Homepage"
+msgstr ""
+
+#: templates/footer.html:4
+msgid "Contact us"
+msgstr ""
+
+#: templates/footer.html:5 templates/register.html:59
+msgid "ToS"
+msgstr ""
+
+#: templates/footer.html:7
+msgid "Rights"
+msgstr ""
+
+#: templates/index.html:17
+msgid "Welcome"
+msgstr ""
+
+#: templates/index.html:18
+msgid "Stay here"
+msgstr ""
+
+#: templates/index.html:23
+msgid "Trends"
+msgstr ""
+
+#: templates/index.html:29
+msgid "Subscribe to us"
+msgstr ""
+
+#: templates/index.html:30
+msgid "Subscribe"
+msgstr ""
+
+#: templates/login.html:5 templates/login.html:17 templates/login.html:37
+#: templates/nav.html:46
+msgid "Login"
+msgstr ""
+
+#: templates/login.html:18
+msgid "Please login"
+msgstr ""
+
+#: templates/login.html:31 templates/login.html:32 templates/register.html:40
+#: templates/register.html:41
+msgid "Password"
+msgstr ""
+
+#: templates/login.html:42
+msgid "Don't have an account"
+msgstr ""
+
+#: templates/login.html:43
+msgid "Sign up then"
+msgstr ""
+
+#: templates/nav.html:14
+msgid "Title"
+msgstr ""
+
+#: templates/nav.html:15
+msgid "Actors"
+msgstr ""
+
+#: templates/nav.html:16
+msgid "Director"
+msgstr ""
+
+#: templates/nav.html:35
+msgid "French"
+msgstr ""
+
+#: templates/nav.html:40
+msgid "English"
+msgstr ""
+
+#: templates/nav.html:45 templates/register.html:5 templates/register.html:17
+msgid "Register"
+msgstr ""
+
+#: templates/register.html:18
+msgid "Please sign up"
+msgstr ""
+
+#: templates/register.html:23 templates/register.html:24
+msgid "Username"
+msgstr ""
+
+#: templates/register.html:49 templates/register.html:50
+msgid "Password Repeat"
+msgstr ""
+
+#: templates/register.html:59
+msgid "You accept"
+msgstr ""
+
+#: templates/register.html:61
+msgid "Sign up"
+msgstr ""
+
+#: templates/register.html:66
+msgid "Already have an account"
+msgstr ""
+
+#: templates/register.html:67
+msgid "Login then"
 msgstr ""
 

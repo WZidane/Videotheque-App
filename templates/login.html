@@ -2,7 +2,7 @@
 
 {% block title %} 
 
-Moviefy - Connexion 
+Moviefy - {{ _('Login') }}
 
 {% endblock %}
 
@@ -11,6 +11,39 @@ Moviefy - Connexion
 {% endblock %}
 
 {% block content %}
+<div id="login" class="d-flex align-content-center p-5 w-100 mb-5">
+    <form class="d-flex flex-column m-auto p-3 shadow-lg border rounded w-100">
+        <div class="text-center">
+            <h1>{{ _('Login') }}</h1>
+            <p class="text-secondary">{{ _('Please login') }}</p>
+
+            <div class="input-group m-auto w-50 mt-3 mb-3">
+                <span class="input-group-text"></span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGroup1" placeholder="{{ _('Email') }}" required>
+                  <label for="floatingInputGroup1">{{ _('Email') }}</label>
+                </div>
+            </div>
+
+            <div class="input-group m-auto w-50 mb-3">
+                <span class="input-group-text"></span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGroup2" placeholder="{{ _('Password') }}" required>
+                  <label for="floatingInputGroup2">{{ _('Password') }}</label>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <button type="submit" class="btn btn-success mt-3">{{ _('Login') }}</button>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <p>{{ _("Don't have an account") }} <a href="{{ url_for('register') }}" class="btn btn-danger ms-3">{{
+                    _('Sign up then') }}</a></p>
+        </div>
+    </form>
+</div>
 {% endblock %}
 
 {% block footer %}

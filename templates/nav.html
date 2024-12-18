@@ -8,68 +8,42 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <form class="d-flex align-items-center w-100 form-search ms-5">
-        <div class="input-group">
-          <button class="btn btn-light dropdown-toggle shadow-0" type="button" data-mdb-toggle="dropdown"
-            aria-expanded="false" style="padding-bottom: 0.4rem;">
-            All
-          </button>
-          <ul class="dropdown-menu dropdown-menu-dark fa-ul">
-            <li>
-              <a class="dropdown-item" href="#"><span class="fa-li pe-2"><i class="fas fa-film"></i></span>{{ _('Titre')
-                }}</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"><span class="fa-li pe-2"><i class="fas fa-tv"></i></span>TV
-                Episodes</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"><span class="fa-li pe-2"><i
-                    class="fas fa-user-friends"></i></span>Celebs</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"><span class="fa-li pe-2"><i
-                    class="fas fa-building"></i></span>Companies</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"><span class="fa-li pe-2"><i class="fas fa-key"></i></span>Keywords</a>
-            </li>
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-            <li>
-              <a class="dropdown-item" href="#"><span class="fa-li pe-2"><i
-                    class="fas fa-search-plus"></i></span>Advanced
-                search<i class="fas fa-chevron-right ps-2"></i></a>
-            </li>
-          </ul>
-          <input type="search" class="form-control" placeholder="{{ _('Rechercher...') }}" />
+        <div class="d-flex input-group">
+          <div>
+            <select class="form-select rounded-start rounded-end-0">
+              <option value="1" selected>{{ _('Title') }}</option>
+              <option value="2">{{ _('Actors') }}</option>
+              <option value="3">{{ _('Director') }}</option>
+            </select>
+          </div>          
+          <input type="search" class="form-control rounded-end" placeholder="{{ _('Search') }}" />
         </div>
         <a href="#!" class="text-white"><i class="fas fa-search ps-3"></i></a>
       </form>
       <ul class="navbar-nav ms-auto me-auto my-2 my-lg-0 navbar-nav-scroll w-25 ps-3 pe-3 justify-content-around"
         style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link text-white" href="{{ url_for('catalogue') }}">{{ _('Catalogue') }}</a>
+          <a class="nav-link text-white" href="{{ url_for('catalog') }}">{{ _('Catalog') }}</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            {{ _('Langue') }}
+            {{ get_locale().upper() }}
           </a>
           <ul class="dropdown-menu bg-primary">
             <li><a class="dropdown-item bg-primary text-white" href="{{ url_for('change_language', lang='fr') }}">{{
-                _('Français') }}</a></li>
+                _('French') }}</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
             <li><a class="dropdown-item bg-primary text-white" href="{{ url_for('change_language', lang='en') }}">{{
-                _('Anglais') }}</a></li>
+                _('English') }}</a></li>
           </ul>
         </li>
       </ul>
       <div class="d-flex w-25 justify-content-around">
-        <a class="btn btn-danger me-2" href="{{ url_for('register') }}">{{ _('Inscription') }}</a>
-        <a class="btn btn-success" href="{{ url_for('login') }}">{{ _('Connexion') }}</a>
+        <a class="btn btn-danger me-2" href="{{ url_for('register') }}">{{ _('Register') }}</a>
+        <a class="btn btn-success" href="{{ url_for('login') }}">{{ _('Login') }}</a>
       </div>
     </div>
   </div>

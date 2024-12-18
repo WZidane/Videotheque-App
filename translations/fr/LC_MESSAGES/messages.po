@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-16 18:32+0000\n"
+"POT-Creation-Date: 2024-12-18 10:53+0000\n"
 "PO-Revision-Date: 2024-12-16 17:30+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -18,34 +18,154 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: templates/nav.html:18
-msgid "Titre"
-msgstr "Titre"
-
-#: templates/nav.html:45
-msgid "Rechercher..."
-msgstr "Rechercher..."
-
-#: templates/nav.html:52
-msgid "Catalogue"
+#: templates/catalog.html:5 templates/catalog.html:15 templates/nav.html:26
+msgid "Catalog"
 msgstr "Catalogue"
 
-#: templates/nav.html:57
-msgid "Langue"
-msgstr "Langue"
+#: templates/catalog.html:18
+msgid "Looking for a movie"
+msgstr "Rechercher un film, un acteur..."
 
-#: templates/nav.html:61
-msgid "Français"
-msgstr "Français"
+#: templates/catalog.html:19 templates/nav.html:19
+msgid "Search"
+msgstr "Rechercher"
 
-#: templates/nav.html:66
-msgid "Anglais"
-msgstr "Anglais"
+#: templates/contact.html:5 templates/contact.html:17
+msgid "Contact"
+msgstr "Contactez-nous"
 
-#: templates/nav.html:71
-msgid "Inscription"
+#: templates/contact.html:18
+msgid "Please contact us"
+msgstr "Veuillez remplir ce formulaire pour nous contacter."
+
+#: templates/contact.html:23 templates/contact.html:24
+msgid "First Name"
+msgstr "Prénom"
+
+#: templates/contact.html:31 templates/contact.html:32
+msgid "Last Name"
+msgstr "Nom"
+
+#: templates/contact.html:39 templates/contact.html:40 templates/login.html:23
+#: templates/login.html:24 templates/register.html:31
+#: templates/register.html:32
+msgid "Email"
+msgstr "Adresse e-mail"
+
+#: templates/contact.html:46
+msgid "Message"
+msgstr "Message"
+
+#: templates/contact.html:50
+msgid "Send"
+msgstr "J'envoie"
+
+#: templates/footer.html:3 templates/index.html:5
+msgid "Homepage"
+msgstr "Accueil"
+
+#: templates/footer.html:4
+msgid "Contact us"
+msgstr "Contactez-nous"
+
+#: templates/footer.html:5 templates/register.html:59
+msgid "ToS"
+msgstr "Politique de confidentialité"
+
+#: templates/footer.html:7
+msgid "Rights"
+msgstr "© 2024 Moviefy, tous droits réservés."
+
+#: templates/index.html:17
+msgid "Welcome"
+msgstr "Bienvenue,"
+
+#: templates/index.html:18
+msgid "Stay here"
+msgstr "Chez votre vidéothèque préférée !"
+
+#: templates/index.html:23
+msgid "Trends"
+msgstr "Tendances"
+
+#: templates/index.html:29
+msgid "Subscribe to us"
+msgstr "Venez découvrir toutes nos nouveautés ! Restez informer !"
+
+#: templates/index.html:30
+msgid "Subscribe"
+msgstr "Je m'abonne !"
+
+#: templates/login.html:5 templates/login.html:17 templates/login.html:37
+#: templates/nav.html:46
+msgid "Login"
+msgstr "Connexion"
+
+#: templates/login.html:18
+msgid "Please login"
+msgstr "Veuillez remplir ce formulaire pour vous connecter."
+
+#: templates/login.html:31 templates/login.html:32 templates/register.html:40
+#: templates/register.html:41
+msgid "Password"
+msgstr "Mot de passe"
+
+#: templates/login.html:42
+msgid "Don't have an account"
+msgstr "Vous n'avez pas de compte ?"
+
+#: templates/login.html:43
+msgid "Sign up then"
+msgstr "Je m'inscris !"
+
+#: templates/nav.html:14
+msgid "Title"
+msgstr "Titre"
+
+#: templates/nav.html:15
+msgid "Actors"
+msgstr "Acteurs"
+
+#: templates/nav.html:16
+msgid "Director"
+msgstr "Réalisateur"
+
+#: templates/nav.html:35
+msgid "French"
+msgstr "FR"
+
+#: templates/nav.html:40
+msgid "English"
+msgstr "EN"
+
+#: templates/nav.html:45 templates/register.html:5 templates/register.html:17
+msgid "Register"
 msgstr "Inscription"
 
-#: templates/nav.html:72
-msgid "Connexion"
-msgstr "Connexion"
+#: templates/register.html:18
+msgid "Please sign up"
+msgstr "Veuillez remplir ce formulaire pour créer votre compte."
+
+#: templates/register.html:23 templates/register.html:24
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: templates/register.html:49 templates/register.html:50
+msgid "Password Repeat"
+msgstr "Confirmer votre mot de passe"
+
+#: templates/register.html:59
+msgid "You accept"
+msgstr "En créant un compte vous acceptez notre"
+
+#: templates/register.html:61
+msgid "Sign up"
+msgstr "S'inscrire"
+
+#: templates/register.html:66
+msgid "Already have an account"
+msgstr "Vous avez déjà un compte ?"
+
+#: templates/register.html:67
+msgid "Login then"
+msgstr "Connectez-vous !"

@@ -23,9 +23,9 @@ babel = Babel(app, locale_selector=get_locale)
 def index():
     return render_template('index.html')
 
-@app.route('/catalogue', methods=['GET'])
-def catalogue():
-    return render_template('catalogue.html')
+@app.route('/catalog', methods=['GET'])
+def catalog():
+    return render_template('catalog.html')
 
 @app.route('/register', methods=['GET'])
 def register():
@@ -34,6 +34,10 @@ def register():
 @app.route('/login', methods=['GET'])
 def login():
     return render_template('login.html')
+
+@app.route('/contact', methods=['GET'])
+def contact():
+    return render_template('contact.html')
 
 @app.route('/change_language/', methods=['GET'])
 def change_language():
