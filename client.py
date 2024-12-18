@@ -40,7 +40,7 @@ class Client:
                 # count of the results
                 total_results = 0
                 for director in directors:
-                    # Request to get the films the director worked on
+                    # Request to get the movies the director worked on
                     url = f"https://api.themoviedb.org/3/person/{director}/movie_credits"
                     response = requests.get(url, {'language': language, 'page': 1}, headers=cls.headers)
                     dataMovieCredits= response.json()
@@ -49,6 +49,38 @@ class Client:
                         if movie.get("job") == "Director":
                             data.append(movie)
                             total_results += 1
+                json_results = {
+                    "total_results" : total_results,
+                    "results" : data
+                }
+                return json_results
+        return None
+    
+    @classmethod
+    def getMoviesByActor(cls, query, page=1, language="fr"):
+        # Resquest to search persons
+        personResponse = requests.get('https://api.themoviedb.org/3/search/person', {'query': query}, headers=cls.headers)
+        data= personResponse.json()
+        actors = []
+        if data.get("total_results") > 0 :
+            for person in data.get("results", []):
+                # Retrieve the ids of only the actors in the list
+                if person.get("known_for_department") == "Acting":
+                    actors.append(person["id"])
+            if(len(actors)> 0):
+                # json where all results will be stored
+                data = []
+                # count of the results
+                total_results = 0
+                for actor in actors:
+                    # Request to get the movies the actor worked on
+                    url = f"https://api.themoviedb.org/3/person/{actor}/movie_credits"
+                    response = requests.get(url, {'language': language, 'page': 1}, headers=cls.headers)
+                    dataMovieCredits= response.json()
+                    # Only retrieves the movies where the actor worked as an actor
+                    for movie in dataMovieCredits.get("cast", []):
+                        data.append(movie)
+                        total_results += 1
                 json_results = {
                     "total_results" : total_results,
                     "results" : data
