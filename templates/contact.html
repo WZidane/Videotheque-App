@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %} 
+
+Moviefy - {{ _('Contact') }}
+
+{% endblock %}
+
+{% block nav %}
+    {% include "nav.html" %}
+{% endblock %}
+
+{% block content %}
+<div id="contact" class="d-flex align-content-center p-5 w-100 mb-5">
+    <form class="d-flex flex-column m-auto p-3 shadow-lg border rounded w-100">
+        <div class="text-center">
+            <h1>{{ _('Contact') }}</h1>
+            <p class="text-secondary">{{ _('Please contact us') }}</p>
+
+            <div class="input-group mb-3 mt-3">
+                <span class="input-group-text"></span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGroup1" placeholder="{{ _('First Name') }}" required>
+                  <label for="floatingInputGroup1">{{ _('First Name') }}</label>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text"></span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGroup2" placeholder="{{ _('Last Name') }}" required>
+                  <label for="floatingInputGroup2">{{ _('Last Name') }}</label>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text"></span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGroup3" placeholder="{{ _('Email') }}" required>
+                  <label for="floatingInputGroup3">{{ _('Email') }}</label>
+                </div>
+            </div>
+
+            <div class="form-floating">
+                <textarea class="form-control h-100" id="floatingTextarea"></textarea>
+                <label for="floatingTextarea">{{ _('Message') }}</label>
+              </div>
+
+            <div class="text-center mt-5">
+                <button type="submit" class="btn btn-success mt-3">{{ _('Send') }}</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block footer %}
+    {% include "footer.html" %}
+{% endblock %}
