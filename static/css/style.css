@@ -40,12 +40,6 @@
     width: fit-content;
 }
 
-/* FOOTER */
-
-footer {
-    margin-top: -3.9vh;
-}
-
 @media screen and (max-width: 991px) {
 
     /* NAV */
