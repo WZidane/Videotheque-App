@@ -169,3 +169,4 @@ msgstr "Vous avez déjà un compte ?"
 #: templates/register.html:67
 msgid "Login then"
 msgstr "Connectez-vous !"
+

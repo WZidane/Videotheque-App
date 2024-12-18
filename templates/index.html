@@ -27,7 +27,14 @@ Moviefy - {{ _('Homepage') }}
         <div class="w-50 bg-primary bg-gradient p-5 text-white rounded">
             <h3>Newsletter</h3>
             <p>{{ _('Subscribe to us') }}</p>
-            <button class="btn btn-success text-white w-25">{{ _('Subscribe') }}</button>
+            <div class="input-group mb-3 mt-3">
+                <span class="input-group-text"></span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGroup1" placeholder="{{ _('Email') }}" required>
+                  <label for="floatingInputGroup1">{{ _('Email') }}</label>
+                </div>
+                <button class="btn btn-success text-white w-50">{{ _('Subscribe') }}</button>
+            </div>
         </div>
     </div>
 </div>
