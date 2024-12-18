@@ -1,4 +1,5 @@
-/* VARIABLES */
+/* VARS */
+
 :root {
     --background-parallax: url('');
 }
@@ -9,7 +10,7 @@
     width: 100px;
 }
 
-/* ACCUEIL */
+/* HOMEPAGE */
 
 .h-300 {
     min-height: 500px;
@@ -33,7 +34,7 @@
     --background-parallax: url('../../static/img/theater.jpg');
 }
 
-/* CATALOGUE */
+/* CATALOG */
 
 #catalogue h1 {
     width: fit-content;
@@ -43,4 +44,37 @@
 
 footer {
     margin-top: -3.9vh;
+}
+
+@media screen and (max-width: 991px) {
+
+    /* NAV */
+
+    div#navbarScroll form {
+        width: 75% !important;
+        margin: auto !important;
+    }
+
+    div#navbarScroll ul {
+        padding-left: 0 !important;
+        width: 75% !important;
+    }
+
+    div#navbarScroll ul .nav-item {
+        margin: 5px 0 5px 0 !important;
+    }
+
+    div#navbarScroll ul+div {
+        width: 75% !important;
+        flex-direction: column !important;
+        margin: auto !important;
+    }
+
+    div#navbarScroll ul+div a {
+        margin: 10px 0 10px 0 !important;
+    }
+
+    div#navbarScroll ul+div a:first-of-type {
+        margin-right: 0 !important;
+    }
 }
