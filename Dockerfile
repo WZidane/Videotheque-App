@@ -6,4 +6,8 @@ WORKDIR /app
 
 RUN pip install --no-cache-dir flask flask-babel
 
+RUN pip install requests
+
+RUN pip install python-dotenv
+
 COPY . .
