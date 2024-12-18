@@ -12,13 +12,13 @@ class Client:
     }
 
     @classmethod
-    def searchMovies(cls, query, page=1):
-        response = requests.get('https://api.themoviedb.org/3/search/movie', {'query': query, 'language': 'fr', 'page': page}, headers= cls.headers)
+    def searchMovies(cls, query, page=1, language="fr"):
+        response = requests.get('https://api.themoviedb.org/3/search/movie', {'query': query, 'language': language, 'page': page}, headers= cls.headers)
         return response
     
     @classmethod
-    def getMovie(cls, id):
+    def getMovie(cls, id, language="fr"):
         url = f"https://api.themoviedb.org/3/movie/{id}"
 
-        response = requests.get(url, {'language': 'fr'}, headers=cls.headers)
+        response = requests.get(url, {'language': language}, headers=cls.headers)
         return response
