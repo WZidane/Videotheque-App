@@ -1,5 +1,5 @@
 import secrets, textwrap
-from flask import Flask, redirect, url_for
+from flask import Flask, session, request, redirect, url_for
 from flask_babel import Babel, _
 from client import Client
 from utils.locale import get_locale

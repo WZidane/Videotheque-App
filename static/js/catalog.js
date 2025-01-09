@@ -1,8 +1,14 @@
 const searchInput = document.getElementById('search-movie');
 const searchFilter = document.getElementById('search-filter');
+const searchButton = document.getElementById('search-button');
 const resultsList = document.getElementById('results-list');
 
-searchInput.addEventListener('input', () => {
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+function research() {
     const query = searchInput.value;
     const filter = searchFilter.value;
 
@@ -40,6 +46,7 @@ searchInput.addEventListener('input', () => {
                 } else if(item.profile_path) {
                     poster = item.profile_path;
                 }
+
                 if(poster && name) {
                     resultsList.innerHTML += `<div class="col-12 col-md-2">
                     <div class="card shadow-sm">
@@ -57,4 +64,15 @@ searchInput.addEventListener('input', () => {
         console.error('Erreur:', error);
         resultsList.innerHTML = '<p class="alert alert-danger">Aucun résultat disponible.</p>';
     });
+}
+
+searchInput.addEventListener('input', () => {
+    research();
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    if(getQueryParam('input')) {
+        research();
+    }
 });
