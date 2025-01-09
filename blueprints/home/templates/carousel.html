@@ -5,7 +5,7 @@
             <div class="row p-3 m-auto">
                 {% for i in range(0, 4) %}
                 <div class="d-flex col-md-3 justify-content-center">
-                    <div class="card w-100">
+                    <div class="card w-100 shadow-sm">
                         <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/{{ data.results[i].poster_path }}"
                             class="card-img-top" alt="Film {{i}}">
                         <div class="card-body">
@@ -24,7 +24,7 @@
             <div class="row p-3 m-auto">
                 {% for i in range(5, 9) %}
                 <div class="d-flex col-md-3 justify-content-center">
-                    <div class="card w-100">
+                    <div class="card w-100 shadow-sm">
                         <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/{{ data.results[i].poster_path }}"
                             class="card-img-top" alt="Film {{i}}">
                         <div class="card-body">
