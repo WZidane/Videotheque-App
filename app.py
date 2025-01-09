@@ -1,6 +1,7 @@
-import secrets
+import secrets, textwrap, re
 from flask import Flask, render_template, request, redirect, session
 from flask_babel import Babel, _
+from client import Client
 
 app = Flask(__name__)
 
@@ -19,9 +20,14 @@ def get_locale():
 
 babel = Babel(app, locale_selector=get_locale)
 
+@app.template_filter('shorten')
+def shorten_text(text, width=100, placeholder="..."):
+    return textwrap.shorten(text, width=width, placeholder=placeholder)
+
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    response = Client.getTrends("week", get_locale())
+    return render_template('index.html', data=response.json())
 
 @app.route('/catalog', methods=['GET'])
 def catalog():
@@ -43,3 +49,25 @@ def contact():
 def change_language():
     session['lang'] = request.args.get('lang')
     return redirect(request.referrer)
+
+@app.route('/search', methods=['POST'])
+def search():
+
+    data = request.get_json()
+    query = data.get('query')
+    filter_type = data.get('filter_type')
+
+    if filter_type == '1':  # Titre
+        response = Client.searchMovies(query, language=get_locale())
+    elif filter_type == '2':  # Acteurs
+        response = Client.searchActors(query, language=get_locale())
+    elif filter_type == '3':  # Réalisateur
+        response = Client.searchDirectors(query, language=get_locale())
+
+    return response
+
+@app.route('/test', methods=['GET'])
+def test():
+    # response = Client.getTrends("week", get_locale())
+    response = Client.searchActors("Tom", language=get_locale())
+    return response

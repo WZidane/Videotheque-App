@@ -12,19 +12,23 @@
 
 /* HOMEPAGE */
 
-.h-300 {
+.circle {
+    clip-path: circle();
+}
+
+.w-70p {
+    width: 70px !important;
+}
+
+.h-m500p {
     min-height: 500px;
     height: calc(100vh/2.5);
 }
 
-/* .parallax::before {
-    content: "";
-    display: flex;
-    background: var(--background-parallax) center / cover no-repeat fixed;
-    filter: blur(5px);
-    height: 100%;
-    z-index: -1;
-} */
+.h-m600p {
+    min-height: 600px;
+    height: auto;
+}
 
 .parallax {
     display: flex;

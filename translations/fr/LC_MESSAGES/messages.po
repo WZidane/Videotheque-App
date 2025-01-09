@@ -58,7 +58,7 @@ msgstr "Message"
 
 #: templates/contact.html:50
 msgid "Send"
-msgstr "J'envoie"
+msgstr "Envoyer !"
 
 #: templates/footer.html:3 templates/index.html:5
 msgid "Homepage"
@@ -128,7 +128,7 @@ msgstr "Acteurs"
 
 #: templates/nav.html:16
 msgid "Director"
-msgstr "Réalisateur"
+msgstr "Réalisateurs"
 
 #: templates/nav.html:35
 msgid "French"
