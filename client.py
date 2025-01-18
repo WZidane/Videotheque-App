@@ -14,8 +14,11 @@ class Client:
     @classmethod
     def searchMovies(cls, query, page=1, language="fr"):
         response = requests.get('https://api.themoviedb.org/3/search/movie', {'query': query, 'language': language, 'page': page}, headers= cls.headers)
-        return response.json()
-    
+        data = response.json()
+        if data.get("total_results") > 0:
+            return response.json()
+        return None
+      
     @classmethod
     def getMovie(cls, id, language="fr"):
         url = f"https://api.themoviedb.org/3/movie/{id}"
@@ -168,3 +171,10 @@ class Client:
                     "results" : data
                 }
                 return json_results
+              
+    @classmethod
+    def getTrends(cls, time, language):
+        url = f"https://api.themoviedb.org/3/trending/movie/{time}"
+
+        response = requests.get(url, {'language': language}, headers= cls.headers)
+        return response

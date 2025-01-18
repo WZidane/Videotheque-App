@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Moviefy - {{ _('Homepage') }}
+
+{% endblock %}
+
+{% block nav %}
+{% include "nav.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-column w-100">
+    <div class="w-100 h-m500p parallax">
+        <div class="w-50 bg-primary bg-gradient p-5 text-white rounded">
+            <h1>{{ _('Welcome') }}</h1>
+            <h2>{{ _('Stay here') }}</h2>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column w-100 h-m600p p-5">
+        <h3 class="ps-5 ms-5 mb-5">{{ _('Trends') }}</h3>
+        {% include "carousel.html" %}
+    </div>
+
+    <div class="w-100 h-m500p parallax">
+        <div class="w-50 bg-primary bg-gradient p-5 rounded">
+            <h3 class="text-white">Newsletter</h3>
+            <p class="text-white">{{ _('Subscribe to us') }}</p>
+            <div class="input-group mb-3 mt-3">
+                <span class="input-group-text"></span>
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGroup1" placeholder="{{ _('Email') }}" required>
+                  <label for="floatingInputGroup1">{{ _('Email') }}</label>
+                </div>
+                <button class="btn btn-success text-white w-50">{{ _('Subscribe') }}</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}

@@ -82,7 +82,7 @@ msgstr "Welcome,"
 
 #: templates/index.html:18
 msgid "Stay here"
-msgstr "At your favorite video browsing store!"
+msgstr "At your favorite video browsing app!"
 
 #: templates/index.html:23
 msgid "Trends"
@@ -169,3 +169,4 @@ msgstr "You already have an account?"
 #: templates/register.html:67
 msgid "Login then"
 msgstr "Login"
+

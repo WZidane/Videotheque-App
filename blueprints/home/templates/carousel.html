@@ -1,0 +1,54 @@
+<div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner w-75 m-auto">
+
+        <div class="carousel-item active">
+            <div class="row p-3 m-auto">
+                {% for i in range(0, 4) %}
+                <div class="d-flex col-md-3 justify-content-center">
+                    <div class="card w-100 shadow-sm">
+                        <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/{{ data.results[i].poster_path }}"
+                            class="card-img-top" alt="Film {{i}}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ data.results[i].title }}</h5>
+                            <p class="card-text">
+                                {{ data.results[i].overview | shorten(100) }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="row p-3 m-auto">
+                {% for i in range(5, 9) %}
+                <div class="d-flex col-md-3 justify-content-center">
+                    <div class="card w-100 shadow-sm">
+                        <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/{{ data.results[i].poster_path }}"
+                            class="card-img-top" alt="Film {{i}}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ data.results[i].title }}</h5>
+                            <p class="card-text">
+                                {{ data.results[i].overview | shorten(100) }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="carousel-control-prev circle bg-primary m-auto w-70p rounded-5" href="#movieCarousel" role="button"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next circle bg-primary m-auto w-70p rounded-5" href="#movieCarousel" role="button"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>
