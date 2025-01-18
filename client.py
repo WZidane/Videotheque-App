@@ -60,7 +60,7 @@ class Client:
         return None
     
     @classmethod
-    def searchDirectors(cls, query, page=1, language="fr"):
+    def searchDirectors(cls, query, language="fr"):
         # Resquest to search persons
         personResponse = requests.get('https://api.themoviedb.org/3/search/person', {'query': query}, headers=cls.headers)
         data= personResponse.json()
