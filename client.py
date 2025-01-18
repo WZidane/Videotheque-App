@@ -18,7 +18,7 @@ class Client:
         if data.get("total_results") > 0:
             return response.json()
         return None
-    
+      
     @classmethod
     def getMovie(cls, id, language="fr"):
         url = f"https://api.themoviedb.org/3/movie/{id}"
@@ -171,7 +171,7 @@ class Client:
                     "results" : data
                 }
                 return json_results
-
+              
     @classmethod
     def getTrends(cls, time, language):
         url = f"https://api.themoviedb.org/3/trending/movie/{time}"
