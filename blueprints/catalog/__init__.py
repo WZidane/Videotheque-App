@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect
+from flask import Blueprint, render_template, request, redirect, url_for
 from client import Client
 from utils.locale import get_locale
 
@@ -6,7 +6,10 @@ catalog = Blueprint('catalog', __name__, template_folder='templates')
 
 @catalog.route('/catalog')
 def catalog_():
-    return render_template('catalog.html')
+
+    res = Client.getGenres()
+
+    return render_template('catalog.html', data=res)
 
 @catalog.route('/search', methods=['POST'])
 def search():
@@ -34,3 +37,12 @@ def search_results():
         return redirect(request.referrer)
     
     return render_template('catalog.html', query=query, filter_type=filter_type)
+
+@catalog.route('/catalog/genre/<id>', methods=['GET'])
+def catalog_genre(id):
+
+    result = Client.getMoviesByGenre(id)
+    res = Client.getGenres()
+    genre = result['results']
+
+    return render_template('catalog.html', data=res, data_genre=genre)

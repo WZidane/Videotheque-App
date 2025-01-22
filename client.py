@@ -171,7 +171,29 @@ class Client:
                     "results" : data
                 }
                 return json_results
-              
+
+
+    @classmethod
+    def getPerson(cls, id, language="fr"):
+        url = f"https://api.themoviedb.org/3/person/{id}"
+
+        response = requests.get(url, {'language': language}, headers=cls.headers)
+        return response.json()
+
+    @classmethod
+    def getMoviesByGenre(cls, id, language="fr"):
+        url = f"https://api.themoviedb.org/3/discover/movie?with_genres={id}"
+
+        response = requests.get(url, {'language': language}, headers=cls.headers)
+        return response.json()     
+    
+    @classmethod
+    def getGenres(cls, language="fr"):
+        url = f"https://api.themoviedb.org/3/genre/movie/list"
+
+        response = requests.get(url, {'language': language}, headers=cls.headers)
+        return response.json()     
+
     @classmethod
     def getTrends(cls, time, language):
         url = f"https://api.themoviedb.org/3/trending/movie/{time}"

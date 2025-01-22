@@ -23,12 +23,33 @@ Moviefy - {{ _('Catalog') }}
             </select>
         </div>
         <input id="search-movie" class="form-control me-2 rounded-start-0" type="search" value="{{ query }}" placeholder="{{ _('Looking for a movie') }}">
+        <div class="w-25">
+            <select class="form-select rounded-start rounded-end-0" name="genre_type" onchange="filterGenre()" value="{{ genre_type }}" id="genre-filter">
+                {% for genre in data['genres'] %}
+                    <option value="{{ url_for('catalog.catalog_genre', id=genre.id) }}" {% if index == '1' %}selected{% endif %}>{{ genre.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
     </div>
 
     <hr class="w-75 mt-5 m-auto">
     <div class="w-100 h-100">
         <div class="container my-4">
             <div id="results-list" class="row g-4">
+                {% if data_genre %}
+                    {% for data in data_genre %}
+                        <div class="col-12 col-md-2">
+                            <a href="/movie/{{ data.id }}" style="text-decoration: none;">
+                            <div class="card shadow-sm">
+                            <img src="https://media.themoviedb.org/t/p/w220_and_h330_face{{ data.poster_path }}" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ data.title }}</h5>
+                            </div>
+                            </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                {% endif %}
             </div>
         </div>
     </div>
