@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for
+from flask import Blueprint, render_template, redirect, url_for, request, jsonify
 from client import Client
 from utils.locale import get_locale
 from utils.connected import isConnected
@@ -74,6 +74,11 @@ def movie_(id):
 
         else:
 
+            req = f"http://host.docker.internal:5001/api/collection/{res['Movie'][0]['id_tmdb']}"
+            token = request.cookies.get("filmotek_tk")
+            response = requests.get(req, headers={"Content-Type": "application/json", "Authorization": "Bearer " + token})
+            isInCollection = response.json();
+
             genre = getGenres(Client.getMovie(id, get_locale()))
             actors = Client.getCredits(id, get_locale())
 
@@ -98,9 +103,9 @@ def movie_(id):
             connected = isConnected()
 
             if 'isConnected' in connected and connected['isConnected'] == True:
-                return render_template('movie.html', data=res, genres=genre, director_id=director_id, director_name=director_name, director_profile=director_profile, data_actors=act['Actors'], nav=0)
+                return render_template('movie.html', data=res, genres=genre, director_id=director_id, director_name=director_name, director_profile=director_profile, data_actors=act['Actors'], isInCollection=isInCollection['isInCollection'], nav=0)
             else:
-                return render_template('movie.html', data=res, genres=genre, director_id=director_id, director_name=director_name, director_profile=director_profile, data_actors=act['Actors'], nav=1)
+                return render_template('movie.html', data=res, genres=genre, director_id=director_id, director_name=director_name, director_profile=director_profile, data_actors=act['Actors'], isInCollection=isInCollection['isInCollection'], nav=1)
 
 @movie.route('/person/<id>', methods=['GET'])
 def person_(id):
@@ -120,3 +125,37 @@ def person_(id):
             return render_template('person.html', data=res, data_movies=request['results'], nav=0)
         else:
             return render_template('person.html', data=res, data_movies=request['results'], nav=1)
+
+@movie.route('/movie/add/<id>', methods=['GET'])
+def add_movie(id):
+        
+    connected = isConnected()
+
+    if 'isConnected' in connected and connected['isConnected'] == True:
+
+        query = f"http://host.docker.internal:5001/api/collection/{id}"
+
+        token = request.cookies.get("filmotek_tk")
+
+        response = requests.post(query, headers={"Content-Type": "application/json", "Authorization": "Bearer " + token})
+
+        return redirect(url_for('auth.profile'))
+    else:
+        return redirect(url_for('home.home_'))
+
+@movie.route('/movie/delete/<id>', methods=['GET'])
+def delete_movie(id):
+    
+    connected = isConnected()
+
+    if 'isConnected' in connected and connected['isConnected'] == True:
+
+        query = f"http://host.docker.internal:5001/api/collection/{id}"
+
+        token = request.cookies.get("filmotek_tk")
+
+        response = requests.delete(query, headers={"Content-Type": "application/json", "Authorization": "Bearer " + token})
+
+        return redirect(url_for('auth.profile'))
+    else:
+        return redirect(url_for('home.home_'))

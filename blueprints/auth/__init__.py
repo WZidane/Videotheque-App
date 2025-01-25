@@ -87,7 +87,14 @@ def profile():
         error = "You must login!"
 
     if 'isConnected' in res and res['isConnected'] == True:
-        return render_template('profile.html')
+
+        query = f"http://host.docker.internal:5001/api/collection"
+
+        token = request.cookies.get("filmotek_tk")
+
+        response = requests.get(query, json={'language': get_locale()}, headers={"Content-Type": "application/json", "Authorization": "Bearer " + token})
+
+        return render_template('profile.html', data=response.json())
     else:
         return redirect(url_for('auth.login_', error=error))
 

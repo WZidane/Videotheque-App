@@ -62,7 +62,7 @@ Moviefy - {{ _('Person') }}
                                 {% for movie in data_movies[:18] %}
                                     {% if movie.poster_path %}
                                     <div class="d-flex col-12 col-md-2 justify-content-center">
-                                        <a href="/movie/{{ movie.id }}" class="text-decoration-none">
+                                        <a href="{{ url_for('movie.person_', id=movie.id) }}" class="text-decoration-none">
                                             <div class="card w-100 shadow-sm">
                                                 <img src="https://media.themoviedb.org/t/p/w150_and_h225_face/{{ movie.poster_path }}"
                                                     class="card-img-top" alt="">
