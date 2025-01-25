@@ -5,16 +5,18 @@
             <div class="row p-3 m-auto">
                 {% for i in range(0, 4) %}
                 <div class="d-flex col-md-3 justify-content-center">
-                    <div class="card w-100 shadow-sm">
-                        <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/{{ data.results[i].poster_path }}"
-                            class="card-img-top" alt="Film {{i}}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ data.results[i].title }}</h5>
-                            <p class="card-text">
-                                {{ data.results[i].overview | shorten(100) }}
-                            </p>
+                    <a href="/movie/{{ data.results[i].id }}" class="text-decoration-none">
+                        <div class="card w-100 shadow-sm">
+                            <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/{{ data.results[i].poster_path }}"
+                                class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ data.results[i].title }}</h5>
+                                <p class="card-text">
+                                    {{ data.results[i].overview | shorten(100) }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 {% endfor %}
             </div>
@@ -24,16 +26,18 @@
             <div class="row p-3 m-auto">
                 {% for i in range(5, 9) %}
                 <div class="d-flex col-md-3 justify-content-center">
-                    <div class="card w-100 shadow-sm">
-                        <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/{{ data.results[i].poster_path }}"
-                            class="card-img-top" alt="Film {{i}}">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ data.results[i].title }}</h5>
-                            <p class="card-text">
-                                {{ data.results[i].overview | shorten(100) }}
-                            </p>
+                    <a href="/movie/{{ data.results[i].id }}" class="text-decoration-none">
+                        <div class="card w-100 shadow-sm">
+                            <img src="https://media.themoviedb.org/t/p/w220_and_h330_face/{{ data.results[i].poster_path }}"
+                                class="card-img-top" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ data.results[i].title }}</h5>
+                                <p class="card-text">
+                                    {{ data.results[i].overview | shorten(100) }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 {% endfor %}
             </div>

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Moviefy - {{ _('ConfirmUser') }}
+
+{% endblock %}
+
+{% block nav %}
+{% include "nav.html" %}
+{% endblock %}
+
+{% block content %}
+<div id="user-confirm" class="d-flex align-content-center p-5 w-100 mb-5">
+    <div class="border border-5 border-primary min-h-screen flex items-center justify-center p-5 w-100 shadow rounded">
+        <div class="w-100 bg-white">
+            <h3>{{ _('Votre compte a bien été crée.') }}, {{ username }}</h3>
+            <div>
+                <p>{{ _('Veuillez vous connecter !') }}</p>
+                <a href="{{ url_for('auth.login_') }}" class="btn btn-success">Connexion</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}

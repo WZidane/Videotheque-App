@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %} 
+
+Moviefy - {{ _('Movie') }}
+
+{% endblock %}
+
+{% block nav %}
+    {% if nav == 1 %}
+        {% include "nav.html" %}
+    {% else %}
+        {% include "nav_connected.html" %}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<div id="movie" class="d-flex align-content-center p-5 w-100 mb-5">
+    <div class="border border-5 border-primary min-h-screen flex items-center justify-center p-5 w-100 shadow rounded">
+        <div class="w-100 bg-white">
+
+            <div>
+                <div>
+                    <img src="https://media.themoviedb.org/t/p/w220_and_h330_face{{ data['Movie'][0].poster }}" alt="{{ _('Movie Poster') }}" class="h-auto rounded shadow">
+                </div>
+
+                <div id="movie-details">
+                    <h1 class="mt-4 mb-4 d-flex align-items-center">
+                        {% if(get_locale() == "fr") %}
+                            {{ data['Movie'][0].title_fr }}
+                        {% endif %}
+
+                        {% if(get_locale() == "en") %}
+                            {{ data['Movie'][0].title_en }}
+                        {% endif %}
+                        {% if nav == 0 %}
+                        <a href="#" class="btn btn-primary shadow-sm rounded px-4 py-2 ms-3">
+                            {{ _('add to collection') }}
+                        </a>
+                        {% endif %}
+                    </h1>
+                    <p>
+                        <strong>{{ _('synopsis') }}</strong> 
+                        {% if(get_locale() == "fr") %}
+                            {{ data['Movie'][0].synopsis_fr }}
+                        {% endif %}
+        
+                        {% if(get_locale() == "en") %}
+                            {{ data['Movie'][0].synopsis_en }}
+                        {% endif %}
+                    </p>
+
+                    <div class="mt-4">
+                        <p>
+                            <strong>{{ _('genre') }}</strong> 
+                            {{ genres }}
+                        </p>
+                        <p>
+                            <strong>{{ _('country') }}</strong> {{ data['Movie'][0].country }}
+                        </p>
+                        <p>
+                            <strong>{{ _('release_date') }}</strong> {{ data['Movie'][0].release_date }}
+                        </p>
+                        <p>
+                            <p><strong>{{ _('director') }}</strong></p>
+                            
+                            <div class="col-md-1">
+                                <a href="{{ url_for('movie.person_', id=director_id) }}" class="text-decoration-none text-black">
+                                    <div class="card shadow-sm">
+                                        <img src="https://media.themoviedb.org/t/p/w150_and_h225_face{{ director_profile }}" class="card-img-top" alt="">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{ director_name }}</h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </p>
+                        <p>
+                            <p><strong>{{ _('actors') }}</strong></p>
+                            {% if data_actors %}
+                            <div id="results-actors" class="row g-4">
+                            {% for actor in data_actors %}
+                                {% if actor.actor_profile %}
+                                <div class="col-12 col-md-1">
+                                    <a href="{{ url_for('movie.person_', id=actor.actor_id) }}" class="text-decoration-none">
+                                    <div class="card shadow-sm">
+                                    <img src="https://media.themoviedb.org/t/p/w150_and_h225_face{{ actor.actor_profile }}" class="card-img-top" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ actor.actor_name }}</h5>
+                                    </div>
+                                    </div>
+                                    </a>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                            </div>
+                        {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+    {% include "footer.html" %}
+{% endblock %}

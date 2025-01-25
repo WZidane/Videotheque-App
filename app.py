@@ -8,8 +8,10 @@ from blueprints.home import home
 from blueprints.catalog import catalog
 from blueprints.auth import auth
 from blueprints.contact import contact
+from blueprints.movie import movie
 
 app = Flask(__name__, template_folder='blueprints/templates')
+app.url_map.strict_slashes = False
 
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
@@ -38,6 +40,7 @@ app.register_blueprint(home)
 app.register_blueprint(catalog)
 app.register_blueprint(auth)
 app.register_blueprint(contact)
+app.register_blueprint(movie)
 
 @app.route('/test', methods=['GET'])
 def test():

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %} 
+
+Moviefy - {{ _('Person') }}
+
+{% endblock %}
+
+{% block nav %}
+    {% if nav == 1 %}
+        {% include "nav.html" %}
+    {% else %}
+        {% include "nav_connected.html" %}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+<div id="movie" class="d-flex align-content-center p-5 w-100 mb-5">
+    <div class="border border-5 border-primary min-h-screen flex items-center justify-center p-5 w-100 shadow rounded">
+        <div class="w-100 bg-white">
+
+            <div>
+                <div>
+                    <img src="https://media.themoviedb.org/t/p/w220_and_h330_face{{ data['profile_path'] }}" alt="Person Poster" class="h-auto rounded shadow">
+                </div>
+
+                <div id="person-details">
+                    <h1 class="mt-4 mb-4">
+                        {{ data['name'] }}
+                    </h1>
+                    <p>
+                        <strong>{{ _('bio') }}</strong> {{ data['biography'] }}
+                    </p>
+
+                    <div class="mt-4">
+                        <p>
+                            <strong>{{ _('birth') }}</strong> 
+                            {{ data['birthday'] }}
+                        </p>
+
+                        {% if(data['deathday'] != null) %}
+                        <p>
+                            <strong>{{ _('death') }}</strong> 
+                            {{ data['deathday'] }}
+                        </p>
+                        {% endif %}
+                        <p>
+                            <strong>{{ _('job') }}</strong> 
+                            {% if data['known_for_department'] == 'Acting' %}
+                                Actor
+                            {% elif data['known_for_department'] == 'Directing' %}
+                                Director
+                            {% endif %}
+                        </p>
+                        <p>
+                            <strong>{{ _('place_of_birth') }}</strong> {{ data['place_of_birth'] }}
+                        </p>
+                        <p>
+                            <strong>{{ _('movies') }}</strong> 
+                            {% if data_movies %}
+                            <div class="row g-4">
+                                {% for movie in data_movies[:18] %}
+                                    {% if movie.poster_path %}
+                                    <div class="d-flex col-12 col-md-2 justify-content-center">
+                                        <a href="/movie/{{ movie.id }}" class="text-decoration-none">
+                                            <div class="card w-100 shadow-sm">
+                                                <img src="https://media.themoviedb.org/t/p/w150_and_h225_face/{{ movie.poster_path }}"
+                                                    class="card-img-top" alt="">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{ movie.title }}</h5>
+                                                    <p class="card-text">
+                                                        {{ movie.overview | shorten(100) }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+    {% include "footer.html" %}
+{% endblock %}
