@@ -7,7 +7,11 @@ Moviefy - {{ _('Catalog') }}
 {% endblock %}
 
 {% block nav %}
-{% include "nav.html" %}
+    {% if nav == 1 %}
+        {% include "nav.html" %}
+    {% else %}
+        {% include "nav_connected.html" %}
+    {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -22,11 +26,11 @@ Moviefy - {{ _('Catalog') }}
                 <option value="3" {% if filter_type == '3' %}selected{% endif %}>{{ _('Director') }}</option>
             </select>
         </div>
-        <input id="search-movie" class="form-control me-2 rounded-start-0" type="search" value="{{ query }}" placeholder="{{ _('Looking for a movie') }}">
+        <input id="search-movie" class="form-control rounded-0" type="search" value="{{ query }}" placeholder="{{ _('Looking for a movie') }}">
         <div class="w-25">
-            <select class="form-select rounded-start rounded-end-0" name="genre_type" onchange="filterGenre()" value="{{ genre_type }}" id="genre-filter">
+            <select class="form-select rounded-start-0 rounded-end" name="genre_type" onchange="filterGenre()" value="{{ genre_type }}" id="genre-filter">
                 {% for genre in data['genres'] %}
-                    <option value="{{ url_for('catalog.catalog_genre', id=genre.id) }}" {% if index == '1' %}selected{% endif %}>{{ genre.name }}</option>
+                    <option value="{{ url_for('catalog.catalog_genre', id=genre.id) }}" {% if genre.id == id_genre %}selected{% endif %}>{{ genre.name }}</option>
                 {% endfor %}
             </select>
         </div>
@@ -39,7 +43,7 @@ Moviefy - {{ _('Catalog') }}
                 {% if data_genre %}
                     {% for data in data_genre %}
                         <div class="col-12 col-md-2">
-                            <a href="/movie/{{ data.id }}" style="text-decoration: none;">
+                            <a href="/movie/{{ data.id }}" class="text-decoration-none">
                             <div class="card shadow-sm">
                             <img src="https://media.themoviedb.org/t/p/w220_and_h330_face{{ data.poster_path }}" class="card-img-top" alt="">
                             <div class="card-body">

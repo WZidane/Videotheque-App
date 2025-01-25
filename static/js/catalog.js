@@ -75,7 +75,7 @@ function research() {
     })
     .catch(error => {
         console.error('Erreur:', error);
-        resultsList.innerHTML = '<p class="alert alert-danger">Aucun résultat disponible.</p>';
+        resultsList.innerHTML = '<p class="alert alert-danger">No result available.</p>';
     });
 }
 

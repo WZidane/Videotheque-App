@@ -101,38 +101,6 @@ class Client:
         return json_results
     
     @classmethod
-    def getMoviesByActor(cls, query, page=1, language="fr"):
-        # Resquest to search persons
-        personResponse = requests.get('https://api.themoviedb.org/3/search/person', {'query': query}, headers=cls.headers)
-        data= personResponse.json()
-        actors = []
-        if data.get("total_results") > 0 :
-            for person in data.get("results", []):
-                # Retrieve the ids of only the actors in the list
-                if person.get("known_for_department") == "Acting":
-                    actors.append(person["id"])
-            if(len(actors)> 0):
-                # json where all results will be stored
-                data = []
-                # count of the results
-                total_results = 0
-                for actor in actors:
-                    # Request to get the movies the actor worked on
-                    url = f"https://api.themoviedb.org/3/person/{actor}/movie_credits"
-                    response = requests.get(url, {'language': language, 'page': 1}, headers=cls.headers)
-                    dataMovieCredits= response.json()
-                    # Only retrieves the movies where the actor worked as an actor
-                    for movie in dataMovieCredits.get("cast", []):
-                        data.append(movie)
-                        total_results += 1
-                json_results = {
-                    "total_results" : total_results,
-                    "results" : data
-                }
-                return json_results
-        return None
-    
-    @classmethod
     def searchActors(cls, query, page=1, language="fr"):
         # Resquest to search persons
         personResponse = requests.get('https://api.themoviedb.org/3/search/person', {'query': query}, headers=cls.headers)
@@ -176,6 +144,13 @@ class Client:
     @classmethod
     def getPerson(cls, id, language="fr"):
         url = f"https://api.themoviedb.org/3/person/{id}"
+
+        response = requests.get(url, {'language': language}, headers=cls.headers)
+        return response.json()
+
+    @classmethod
+    def getCredits(cls, id, language="fr"):
+        url = f"https://api.themoviedb.org/3/movie/{id}/credits"
 
         response = requests.get(url, {'language': language}, headers=cls.headers)
         return response.json()

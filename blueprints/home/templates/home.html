@@ -7,7 +7,11 @@ Moviefy - {{ _('Homepage') }}
 {% endblock %}
 
 {% block nav %}
-{% include "nav.html" %}
+    {% if nav == 1 %}
+        {% include "nav.html" %}
+    {% else %}
+        {% include "nav_connected.html" %}
+    {% endif %}
 {% endblock %}
 
 {% block content %}

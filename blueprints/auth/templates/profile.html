@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Moviefy - {{ _('Profile') }}
+
+{% endblock %}
+
+{% block nav %}
+{% include "nav_connected.html" %}
+{% endblock %}
+
+{% block content %}
+<div id="user-confirm" class="d-flex align-content-center p-5 w-100 mb-5">
+    <div class="border border-5 border-primary min-h-screen flex items-center justify-center p-5 w-100 shadow rounded">
+        <div class="w-100 bg-white">
+            <h3>{{ _('Cool') }}</h3>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include "footer.html" %}
+{% endblock %}
