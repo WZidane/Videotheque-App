@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-18 10:53+0000\n"
+"POT-Creation-Date: 2025-01-26 09:17+0000\n"
 "PO-Revision-Date: 2024-12-16 17:30+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,155 +18,376 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: templates/catalog.html:5 templates/catalog.html:15 templates/nav.html:26
-msgid "Catalog"
-msgstr "Catalog"
-
-#: templates/catalog.html:18
-msgid "Looking for a movie"
-msgstr "Search for a movie, an actor..."
-
-#: templates/catalog.html:19 templates/nav.html:19
-msgid "Search"
-msgstr "Search"
-
-#: templates/contact.html:5 templates/contact.html:17
-msgid "Contact"
-msgstr "Contact us"
-
-#: templates/contact.html:18
-msgid "Please contact us"
-msgstr "Please enter your details to contact us."
-
-#: templates/contact.html:23 templates/contact.html:24
-msgid "First Name"
-msgstr "First Name"
-
-#: templates/contact.html:31 templates/contact.html:32
-msgid "Last Name"
-msgstr "Last Name"
-
-#: templates/contact.html:39 templates/contact.html:40 templates/login.html:23
-#: templates/login.html:24 templates/register.html:31
-#: templates/register.html:32
-msgid "Email"
-msgstr "E-mail"
-
-#: templates/contact.html:46
-msgid "Message"
-msgstr "Message"
-
-#: templates/contact.html:50
-msgid "Send"
-msgstr "Send"
-
-#: templates/footer.html:3 templates/index.html:5
-msgid "Homepage"
-msgstr "Home"
-
-#: templates/footer.html:4
-msgid "Contact us"
-msgstr "Contact us"
-
-#: templates/footer.html:5 templates/register.html:59
-msgid "ToS"
-msgstr "Terms of Service"
-
-#: templates/footer.html:7
-msgid "Rights"
-msgstr "© 2024 Moviefy, All rights reserved."
-
-#: templates/index.html:17
-msgid "Welcome"
-msgstr "Welcome,"
-
-#: templates/index.html:18
-msgid "Stay here"
-msgstr "At your favorite video browsing app!"
-
-#: templates/index.html:23
-msgid "Trends"
-msgstr "Trends"
-
-#: templates/index.html:29
-msgid "Subscribe to us"
-msgstr "Come and discover all our new products!"
-
-#: templates/index.html:30
-msgid "Subscribe"
-msgstr "Subscribe"
-
-#: templates/login.html:5 templates/login.html:17 templates/login.html:37
-#: templates/nav.html:46
+#: blueprints/auth/templates/login.html:5
+#: blueprints/auth/templates/login.html:17
+#: blueprints/auth/templates/login.html:43 blueprints/templates/nav.html:45
 msgid "Login"
 msgstr "Login"
 
-#: templates/login.html:18
+#: blueprints/auth/templates/login.html:18
 msgid "Please login"
-msgstr "Please enter your details to login."
+msgstr "Please fill in this form to log in."
 
-#: templates/login.html:31 templates/login.html:32 templates/register.html:40
-#: templates/register.html:41
+#: blueprints/auth/templates/login.html:23
+#: blueprints/auth/templates/login.html:24
+#: blueprints/auth/templates/signup.html:31
+#: blueprints/auth/templates/signup.html:32
+#: blueprints/contact/templates/contact.html:43
+#: blueprints/contact/templates/contact.html:44
+#: blueprints/home/templates/home.html:38
+#: blueprints/home/templates/home.html:39
+msgid "Email"
+msgstr "E-mail address"
+
+#: blueprints/auth/templates/login.html:31
+#: blueprints/auth/templates/login.html:32
+#: blueprints/auth/templates/signup.html:40
+#: blueprints/auth/templates/signup.html:41
 msgid "Password"
 msgstr "Password"
 
-#: templates/login.html:42
+#: blueprints/auth/templates/login.html:48
 msgid "Don't have an account"
-msgstr "You don't have an account?"
+msgstr "Don't have an account?"
 
-#: templates/login.html:43
+#: blueprints/auth/templates/login.html:49
 msgid "Sign up then"
-msgstr "Sign up"
+msgstr "Sign up now!"
 
-#: templates/nav.html:14
-msgid "Title"
-msgstr "Title"
+#: blueprints/auth/templates/profile.html:5
+msgid "UserName"
+msgstr "Profile"
 
-#: templates/nav.html:15
-msgid "Actors"
-msgstr "Actors"
+#: blueprints/auth/templates/profile.html:27
+msgid "collection"
+msgstr "My Collection"
 
-#: templates/nav.html:16
-msgid "Director"
-msgstr "Director"
+#: blueprints/auth/templates/profile.html:42
+msgid "delete_movie"
+msgstr "Delete this movie?"
 
-#: templates/nav.html:35
-msgid "French"
-msgstr "FR"
+#: blueprints/auth/templates/register.html:5
+msgid "ConfirmUser"
+msgstr "Account created!"
 
-#: templates/nav.html:40
-msgid "English"
-msgstr "EN"
+#: blueprints/auth/templates/register.html:17
+msgid "Votre compte a bien été crée."
+msgstr "Your account has been created!"
 
-#: templates/nav.html:45 templates/register.html:5 templates/register.html:17
+#: blueprints/auth/templates/register.html:19
+msgid "Veuillez vous connecter !"
+msgstr "Please log in!"
+
+#: blueprints/auth/templates/signup.html:5
+#: blueprints/auth/templates/signup.html:17 blueprints/templates/nav.html:44
 msgid "Register"
 msgstr "Sign up"
 
-#: templates/register.html:18
+#: blueprints/auth/templates/signup.html:18
 msgid "Please sign up"
-msgstr "Please enter your details to register."
+msgstr "Please fill in this form to create your account."
 
-#: templates/register.html:23 templates/register.html:24
+#: blueprints/auth/templates/signup.html:23
+#: blueprints/auth/templates/signup.html:24
 msgid "Username"
 msgstr "Username"
 
-#: templates/register.html:49 templates/register.html:50
-msgid "Password Repeat"
-msgstr "Reenter password for verification"
-
-#: templates/register.html:59
+#: blueprints/auth/templates/signup.html:51
 msgid "You accept"
 msgstr "By creating an account you agree to our"
 
-#: templates/register.html:61
+#: blueprints/auth/templates/signup.html:51 blueprints/templates/footer.html:5
+msgid "ToS"
+msgstr "Terms of Service"
+
+#: blueprints/auth/templates/signup.html:53
 msgid "Sign up"
-msgstr "Sign up"
+msgstr "Sign up now"
 
-#: templates/register.html:66
+#: blueprints/auth/templates/signup.html:58
 msgid "Already have an account"
-msgstr "You already have an account?"
+msgstr "Already have an account?"
 
-#: templates/register.html:67
+#: blueprints/auth/templates/signup.html:59
 msgid "Login then"
-msgstr "Login"
+msgstr "Log in!"
+
+#: blueprints/catalog/templates/catalog.html:5
+#: blueprints/catalog/templates/catalog.html:19
+#: blueprints/templates/nav.html:25 blueprints/templates/nav_connected.html:25
+msgid "Catalog"
+msgstr "Catalog"
+
+#: blueprints/catalog/templates/catalog.html:24
+#: blueprints/templates/nav.html:14 blueprints/templates/nav_connected.html:14
+msgid "Title"
+msgstr "Title"
+
+#: blueprints/catalog/templates/catalog.html:25
+#: blueprints/templates/nav.html:15 blueprints/templates/nav_connected.html:15
+msgid "Actors"
+msgstr "Actors"
+
+#: blueprints/catalog/templates/catalog.html:26
+#: blueprints/templates/nav.html:16 blueprints/templates/nav_connected.html:16
+msgid "Director"
+msgstr "Director"
+
+#: blueprints/catalog/templates/catalog.html:29
+msgid "Looking for a movie"
+msgstr "Search for a movie, an actor..."
+
+#: blueprints/contact/templates/contact.html:5
+#: blueprints/contact/templates/contact.html:21
+msgid "Contact"
+msgstr "Contact us"
+
+#: blueprints/contact/templates/contact.html:22
+msgid "Please contact us"
+msgstr "Please fill in this form to contact us."
+
+#: blueprints/contact/templates/contact.html:27
+#: blueprints/contact/templates/contact.html:28
+msgid "First Name"
+msgstr "Firstname"
+
+#: blueprints/contact/templates/contact.html:35
+#: blueprints/contact/templates/contact.html:36
+msgid "Last Name"
+msgstr "Lastname"
+
+#: blueprints/contact/templates/contact.html:50
+msgid "Message"
+msgstr "Message"
+
+#: blueprints/contact/templates/contact.html:54
+msgid "Send"
+msgstr "Send!"
+
+#: blueprints/home/templates/home.html:5 blueprints/templates/footer.html:3
+msgid "Homepage"
+msgstr "Home"
+
+#: blueprints/home/templates/home.html:21
+msgid "Welcome"
+msgstr "Welcome,"
+
+#: blueprints/home/templates/home.html:22
+msgid "Stay here"
+msgstr "At your favorite video browsing library!"
+
+#: blueprints/home/templates/home.html:27
+msgid "Trends"
+msgstr "Trends"
+
+#: blueprints/home/templates/home.html:34
+msgid "Subscribe to us"
+msgstr "Come and discover all our new products!"
+
+#: blueprints/home/templates/home.html:41
+msgid "Subscribe"
+msgstr "Subscribe now!"
+
+#: blueprints/movie/templates/movie.html:5
+msgid "Movie"
+msgstr "Movie"
+
+#: blueprints/movie/templates/movie.html:24
+msgid "Movie Poster"
+msgstr "Poster of the movie"
+
+#: blueprints/movie/templates/movie.html:39
+msgid "add to collection"
+msgstr "Add to your collection"
+
+#: blueprints/movie/templates/movie.html:45
+msgid "synopsis"
+msgstr "Synopsis:"
+
+#: blueprints/movie/templates/movie.html:57
+msgid "genre"
+msgstr "Genres:"
+
+#: blueprints/movie/templates/movie.html:61
+msgid "country"
+msgstr "Country:"
+
+#: blueprints/movie/templates/movie.html:64
+msgid "release_date"
+msgstr "Release date:"
+
+#: blueprints/movie/templates/movie.html:67
+msgid "director"
+msgstr "Director:"
+
+#: blueprints/movie/templates/movie.html:81
+msgid "actors"
+msgstr "Actors:"
+
+#: blueprints/movie/templates/person.html:5
+msgid "Person"
+msgstr "Information"
+
+#: blueprints/movie/templates/person.html:32
+msgid "bio"
+msgstr "Biography:"
+
+#: blueprints/movie/templates/person.html:37
+msgid "birth"
+msgstr "Birthday:"
+
+#: blueprints/movie/templates/person.html:43
+msgid "death"
+msgstr "Deathday:"
+
+#: blueprints/movie/templates/person.html:48
+msgid "job"
+msgstr "Job:"
+
+#: blueprints/movie/templates/person.html:56
+msgid "place_of_birth"
+msgstr "Place of birth:"
+
+#: blueprints/movie/templates/person.html:59
+msgid "movies"
+msgstr "Movies:"
+
+#: blueprints/templates/footer.html:4
+msgid "Contact us"
+msgstr "Contact us"
+
+#: blueprints/templates/footer.html:7
+msgid "Rights"
+msgstr "© 2025 Moviefy, all rights reserved."
+
+#: blueprints/templates/nav.html:19 blueprints/templates/nav_connected.html:19
+msgid "Search"
+msgstr "Search..."
+
+#: blueprints/templates/nav.html:34 blueprints/templates/nav_connected.html:34
+msgid "French"
+msgstr "FR"
+
+#: blueprints/templates/nav.html:39 blueprints/templates/nav_connected.html:39
+msgid "English"
+msgstr "EN"
+
+#: blueprints/templates/nav_connected.html:44
+msgid "Profile"
+msgstr "Profile"
+
+#: blueprints/templates/nav_connected.html:45
+msgid "Deconnexion"
+msgstr "Logout"
+
+#~ msgid "Catalog"
+#~ msgstr "Catalog"
+
+#~ msgid "Looking for a movie"
+#~ msgstr "Search for a movie, an actor..."
+
+#~ msgid "Search"
+#~ msgstr "Search"
+
+#~ msgid "Contact"
+#~ msgstr "Contact us"
+
+#~ msgid "Please contact us"
+#~ msgstr "Please enter your details to contact us."
+
+#~ msgid "First Name"
+#~ msgstr "First Name"
+
+#~ msgid "Last Name"
+#~ msgstr "Last Name"
+
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgid "Message"
+#~ msgstr "Message"
+
+#~ msgid "Send"
+#~ msgstr "Send"
+
+#~ msgid "Homepage"
+#~ msgstr "Home"
+
+#~ msgid "Contact us"
+#~ msgstr "Contact us"
+
+#~ msgid "ToS"
+#~ msgstr "Terms of Service"
+
+#~ msgid "Rights"
+#~ msgstr "© 2025 Moviefy, All rights reserved."
+
+#~ msgid "Welcome"
+#~ msgstr "Welcome,"
+
+#~ msgid "Stay here"
+#~ msgstr "At your favorite video browsing app!"
+
+#~ msgid "Trends"
+#~ msgstr "Trends"
+
+#~ msgid "Subscribe to us"
+#~ msgstr "Come and discover all our new products!"
+
+#~ msgid "Subscribe"
+#~ msgstr "Subscribe"
+
+#~ msgid "Login"
+#~ msgstr "Login"
+
+#~ msgid "Please login"
+#~ msgstr "Please enter your details to login."
+
+#~ msgid "Password"
+#~ msgstr "Password"
+
+#~ msgid "Don't have an account"
+#~ msgstr "You don't have an account?"
+
+#~ msgid "Sign up then"
+#~ msgstr "Sign up"
+
+#~ msgid "Title"
+#~ msgstr "Title"
+
+#~ msgid "Actors"
+#~ msgstr "Actors"
+
+#~ msgid "Director"
+#~ msgstr "Director"
+
+#~ msgid "French"
+#~ msgstr "FR"
+
+#~ msgid "English"
+#~ msgstr "EN"
+
+#~ msgid "Register"
+#~ msgstr "Sign up"
+
+#~ msgid "Please sign up"
+#~ msgstr "Please enter your details to register."
+
+#~ msgid "Username"
+#~ msgstr "Username"
+
+#~ msgid "Password Repeat"
+#~ msgstr "Reenter password for verification"
+
+#~ msgid "You accept"
+#~ msgstr "By creating an account you agree to our"
+
+#~ msgid "Sign up"
+#~ msgstr "Sign up"
+
+#~ msgid "Already have an account"
+#~ msgstr "You already have an account?"
+
+#~ msgid "Login then"
+#~ msgstr "Login"
 

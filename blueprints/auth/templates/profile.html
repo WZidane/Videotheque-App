@@ -1,25 +1,61 @@
 {% extends "base.html" %}
 
-{% block title %}
+{% block title %} 
 
-Moviefy - {{ _('Profile') }}
+Moviefy - {{ _('UserName') }}
 
 {% endblock %}
 
 {% block nav %}
-{% include "nav_connected.html" %}
+    {% include "nav_connected.html" %}
 {% endblock %}
 
 {% block content %}
-<div id="user-confirm" class="d-flex align-content-center p-5 w-100 mb-5">
+<div id="movie" class="d-flex align-content-center p-5 w-100 mb-5">
     <div class="border border-5 border-primary min-h-screen flex items-center justify-center p-5 w-100 shadow rounded">
         <div class="w-100 bg-white">
-            <h3>{{ _('Cool') }}</h3>
+
+            <div>
+                <div id="person-details">
+                    <h1 class="mt-4 mb-4 ms-2">
+                        {{ data['user'][1] }}
+                    </h1>
+
+                    <div class="mt-4">
+                            {% if data %}
+                            <div class="container row g-4">
+                                <strong>{{ _('collection') }}</strong> 
+                                {% for movie in data['movies'] %}
+                                    <div class="d-flex col-12 col-md-2 justify-content-center">
+                                        <a href="{{ url_for('movie.movie_', id=movie.id_tmdb) }}" class="text-decoration-none">
+                                            <div class="card w-100 shadow-sm">
+                                                <img src="https://media.themoviedb.org/t/p/w150_and_h225_face/{{ movie.poster }}"
+                                                    class="card-img-top" alt="">
+                                                <div class="card-body">
+                                                    {% if(movie.title_fr) %}
+                                                    <h5 class="card-title text-black">{{ movie.title_fr }}</h5>
+                                                    {% endif %}
+                                                    {% if(movie.title_en) %}
+                                                    <h5 class="card-title text-black">{{ movie.title_en }}</h5>
+                                                    {% endif %}
+                                                    <div class="d-flex justify-content-center">
+                                                        <a href="{{ url_for('movie.delete_movie', id=movie.id_tmdb) }}" class="text-decoration-none text-white btn btn-danger">{{ _('delete_movie') }}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 {% endblock %}
 
 {% block footer %}
-{% include "footer.html" %}
+    {% include "footer.html" %}
 {% endblock %}

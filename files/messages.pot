@@ -1,14 +1,14 @@
 # Translations template for PROJECT.
-# Copyright (C) 2024 ORGANIZATION
+# Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-18 10:53+0000\n"
+"POT-Creation-Date: 2025-01-26 09:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,155 +17,265 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: templates/catalog.html:5 templates/catalog.html:15 templates/nav.html:26
-msgid "Catalog"
-msgstr ""
-
-#: templates/catalog.html:18
-msgid "Looking for a movie"
-msgstr ""
-
-#: templates/catalog.html:19 templates/nav.html:19
-msgid "Search"
-msgstr ""
-
-#: templates/contact.html:5 templates/contact.html:17
-msgid "Contact"
-msgstr ""
-
-#: templates/contact.html:18
-msgid "Please contact us"
-msgstr ""
-
-#: templates/contact.html:23 templates/contact.html:24
-msgid "First Name"
-msgstr ""
-
-#: templates/contact.html:31 templates/contact.html:32
-msgid "Last Name"
-msgstr ""
-
-#: templates/contact.html:39 templates/contact.html:40 templates/login.html:23
-#: templates/login.html:24 templates/register.html:31
-#: templates/register.html:32
-msgid "Email"
-msgstr ""
-
-#: templates/contact.html:46
-msgid "Message"
-msgstr ""
-
-#: templates/contact.html:50
-msgid "Send"
-msgstr ""
-
-#: templates/footer.html:3 templates/index.html:5
-msgid "Homepage"
-msgstr ""
-
-#: templates/footer.html:4
-msgid "Contact us"
-msgstr ""
-
-#: templates/footer.html:5 templates/register.html:59
-msgid "ToS"
-msgstr ""
-
-#: templates/footer.html:7
-msgid "Rights"
-msgstr ""
-
-#: templates/index.html:17
-msgid "Welcome"
-msgstr ""
-
-#: templates/index.html:18
-msgid "Stay here"
-msgstr ""
-
-#: templates/index.html:23
-msgid "Trends"
-msgstr ""
-
-#: templates/index.html:29
-msgid "Subscribe to us"
-msgstr ""
-
-#: templates/index.html:30
-msgid "Subscribe"
-msgstr ""
-
-#: templates/login.html:5 templates/login.html:17 templates/login.html:37
-#: templates/nav.html:46
+#: blueprints/auth/templates/login.html:5
+#: blueprints/auth/templates/login.html:17
+#: blueprints/auth/templates/login.html:43 blueprints/templates/nav.html:45
 msgid "Login"
 msgstr ""
 
-#: templates/login.html:18
+#: blueprints/auth/templates/login.html:18
 msgid "Please login"
 msgstr ""
 
-#: templates/login.html:31 templates/login.html:32 templates/register.html:40
-#: templates/register.html:41
+#: blueprints/auth/templates/login.html:23
+#: blueprints/auth/templates/login.html:24
+#: blueprints/auth/templates/signup.html:31
+#: blueprints/auth/templates/signup.html:32
+#: blueprints/contact/templates/contact.html:43
+#: blueprints/contact/templates/contact.html:44
+#: blueprints/home/templates/home.html:38
+#: blueprints/home/templates/home.html:39
+msgid "Email"
+msgstr ""
+
+#: blueprints/auth/templates/login.html:31
+#: blueprints/auth/templates/login.html:32
+#: blueprints/auth/templates/signup.html:40
+#: blueprints/auth/templates/signup.html:41
 msgid "Password"
 msgstr ""
 
-#: templates/login.html:42
+#: blueprints/auth/templates/login.html:48
 msgid "Don't have an account"
 msgstr ""
 
-#: templates/login.html:43
+#: blueprints/auth/templates/login.html:49
 msgid "Sign up then"
 msgstr ""
 
-#: templates/nav.html:14
-msgid "Title"
+#: blueprints/auth/templates/profile.html:5
+msgid "UserName"
 msgstr ""
 
-#: templates/nav.html:15
-msgid "Actors"
+#: blueprints/auth/templates/profile.html:27
+msgid "collection"
 msgstr ""
 
-#: templates/nav.html:16
-msgid "Director"
+#: blueprints/auth/templates/profile.html:42
+msgid "delete_movie"
 msgstr ""
 
-#: templates/nav.html:35
-msgid "French"
+#: blueprints/auth/templates/register.html:5
+msgid "ConfirmUser"
 msgstr ""
 
-#: templates/nav.html:40
-msgid "English"
+#: blueprints/auth/templates/register.html:17
+msgid "Votre compte a bien été crée."
 msgstr ""
 
-#: templates/nav.html:45 templates/register.html:5 templates/register.html:17
+#: blueprints/auth/templates/register.html:19
+msgid "Veuillez vous connecter !"
+msgstr ""
+
+#: blueprints/auth/templates/signup.html:5
+#: blueprints/auth/templates/signup.html:17 blueprints/templates/nav.html:44
 msgid "Register"
 msgstr ""
 
-#: templates/register.html:18
+#: blueprints/auth/templates/signup.html:18
 msgid "Please sign up"
 msgstr ""
 
-#: templates/register.html:23 templates/register.html:24
+#: blueprints/auth/templates/signup.html:23
+#: blueprints/auth/templates/signup.html:24
 msgid "Username"
 msgstr ""
 
-#: templates/register.html:49 templates/register.html:50
-msgid "Password Repeat"
-msgstr ""
-
-#: templates/register.html:59
+#: blueprints/auth/templates/signup.html:51
 msgid "You accept"
 msgstr ""
 
-#: templates/register.html:61
+#: blueprints/auth/templates/signup.html:51 blueprints/templates/footer.html:5
+msgid "ToS"
+msgstr ""
+
+#: blueprints/auth/templates/signup.html:53
 msgid "Sign up"
 msgstr ""
 
-#: templates/register.html:66
+#: blueprints/auth/templates/signup.html:58
 msgid "Already have an account"
 msgstr ""
 
-#: templates/register.html:67
+#: blueprints/auth/templates/signup.html:59
 msgid "Login then"
+msgstr ""
+
+#: blueprints/catalog/templates/catalog.html:5
+#: blueprints/catalog/templates/catalog.html:19
+#: blueprints/templates/nav.html:25 blueprints/templates/nav_connected.html:25
+msgid "Catalog"
+msgstr ""
+
+#: blueprints/catalog/templates/catalog.html:24
+#: blueprints/templates/nav.html:14 blueprints/templates/nav_connected.html:14
+msgid "Title"
+msgstr ""
+
+#: blueprints/catalog/templates/catalog.html:25
+#: blueprints/templates/nav.html:15 blueprints/templates/nav_connected.html:15
+msgid "Actors"
+msgstr ""
+
+#: blueprints/catalog/templates/catalog.html:26
+#: blueprints/templates/nav.html:16 blueprints/templates/nav_connected.html:16
+msgid "Director"
+msgstr ""
+
+#: blueprints/catalog/templates/catalog.html:29
+msgid "Looking for a movie"
+msgstr ""
+
+#: blueprints/contact/templates/contact.html:5
+#: blueprints/contact/templates/contact.html:21
+msgid "Contact"
+msgstr ""
+
+#: blueprints/contact/templates/contact.html:22
+msgid "Please contact us"
+msgstr ""
+
+#: blueprints/contact/templates/contact.html:27
+#: blueprints/contact/templates/contact.html:28
+msgid "First Name"
+msgstr ""
+
+#: blueprints/contact/templates/contact.html:35
+#: blueprints/contact/templates/contact.html:36
+msgid "Last Name"
+msgstr ""
+
+#: blueprints/contact/templates/contact.html:50
+msgid "Message"
+msgstr ""
+
+#: blueprints/contact/templates/contact.html:54
+msgid "Send"
+msgstr ""
+
+#: blueprints/home/templates/home.html:5 blueprints/templates/footer.html:3
+msgid "Homepage"
+msgstr ""
+
+#: blueprints/home/templates/home.html:21
+msgid "Welcome"
+msgstr ""
+
+#: blueprints/home/templates/home.html:22
+msgid "Stay here"
+msgstr ""
+
+#: blueprints/home/templates/home.html:27
+msgid "Trends"
+msgstr ""
+
+#: blueprints/home/templates/home.html:34
+msgid "Subscribe to us"
+msgstr ""
+
+#: blueprints/home/templates/home.html:41
+msgid "Subscribe"
+msgstr ""
+
+#: blueprints/movie/templates/movie.html:5
+msgid "Movie"
+msgstr ""
+
+#: blueprints/movie/templates/movie.html:24
+msgid "Movie Poster"
+msgstr ""
+
+#: blueprints/movie/templates/movie.html:39
+msgid "add to collection"
+msgstr ""
+
+#: blueprints/movie/templates/movie.html:45
+msgid "synopsis"
+msgstr ""
+
+#: blueprints/movie/templates/movie.html:57
+msgid "genre"
+msgstr ""
+
+#: blueprints/movie/templates/movie.html:61
+msgid "country"
+msgstr ""
+
+#: blueprints/movie/templates/movie.html:64
+msgid "release_date"
+msgstr ""
+
+#: blueprints/movie/templates/movie.html:67
+msgid "director"
+msgstr ""
+
+#: blueprints/movie/templates/movie.html:81
+msgid "actors"
+msgstr ""
+
+#: blueprints/movie/templates/person.html:5
+msgid "Person"
+msgstr ""
+
+#: blueprints/movie/templates/person.html:32
+msgid "bio"
+msgstr ""
+
+#: blueprints/movie/templates/person.html:37
+msgid "birth"
+msgstr ""
+
+#: blueprints/movie/templates/person.html:43
+msgid "death"
+msgstr ""
+
+#: blueprints/movie/templates/person.html:48
+msgid "job"
+msgstr ""
+
+#: blueprints/movie/templates/person.html:56
+msgid "place_of_birth"
+msgstr ""
+
+#: blueprints/movie/templates/person.html:59
+msgid "movies"
+msgstr ""
+
+#: blueprints/templates/footer.html:4
+msgid "Contact us"
+msgstr ""
+
+#: blueprints/templates/footer.html:7
+msgid "Rights"
+msgstr ""
+
+#: blueprints/templates/nav.html:19 blueprints/templates/nav_connected.html:19
+msgid "Search"
+msgstr ""
+
+#: blueprints/templates/nav.html:34 blueprints/templates/nav_connected.html:34
+msgid "French"
+msgstr ""
+
+#: blueprints/templates/nav.html:39 blueprints/templates/nav_connected.html:39
+msgid "English"
+msgstr ""
+
+#: blueprints/templates/nav_connected.html:44
+msgid "Profile"
+msgstr ""
+
+#: blueprints/templates/nav_connected.html:45
+msgid "Deconnexion"
 msgstr ""
 

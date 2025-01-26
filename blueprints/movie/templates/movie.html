@@ -34,9 +34,11 @@ Moviefy - {{ _('Movie') }}
                             {{ data['Movie'][0].title_en }}
                         {% endif %}
                         {% if nav == 0 %}
-                        <a href="#" class="btn btn-primary shadow-sm rounded px-4 py-2 ms-3">
-                            {{ _('add to collection') }}
-                        </a>
+                            {% if isInCollection == False %}
+                                <a href="{{ url_for('movie.add_movie', id=data['Movie'][0].id_tmdb) }}" class="btn btn-primary shadow-sm rounded px-4 py-2 ms-3">
+                                    {{ _('add to collection') }}
+                                </a>
+                            {% endif %}
                         {% endif %}
                     </h1>
                     <p>
