@@ -114,8 +114,15 @@ def logout():
     res = isConnected()
 
     if 'isConnected' in res and res['isConnected'] == True:
+        query = f"http://host.docker.internal:5001/api/logout"
+
+        token = request.cookies.get("filmotek_tk")
+
+        req = requests.delete(query, headers={"Content-Type": "application/json", "Authorization": "Bearer " + token})
+
         cookie = make_response(redirect(url_for('home.home_')))
         cookie.delete_cookie("filmotek_tk")
+        
         return cookie
     else:
         return redirect(url_for('home.home_'))
