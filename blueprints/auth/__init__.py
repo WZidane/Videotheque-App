@@ -45,7 +45,17 @@ def register():
 
     response = requests.post(query, json=data, headers={"Content-Type": "application/json"})
 
-    return render_template('register.html', username=username)
+    res = response.json()
+
+    error = "Erreur : Un utilisateur avec le même nom d'utilisateur ou d'adresse e-mail existe déjà !"
+
+    if(get_locale() == "en"):
+        error = "Error: A user with the same username or email address already exists!"
+
+    if 'error' in res: 
+        return render_template('signup.html', err=error)
+    else:
+        return render_template('register.html', username=username)
 
 @auth.route('/check_login', methods=['POST'])
 def check_login():
