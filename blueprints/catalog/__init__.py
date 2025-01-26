@@ -54,7 +54,7 @@ def search_results():
 @catalog.route('/catalog/genre/<id>', methods=['GET'])
 def catalog_genre(id):
 
-    result = Client.getMoviesByGenre(id)
+    result = Client.getMoviesByGenre(id, get_locale())
     res = Client.getGenres(get_locale())
     genre = result['results']
 
