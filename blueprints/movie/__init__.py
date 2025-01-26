@@ -105,7 +105,7 @@ def movie_(id):
             if 'isConnected' in connected and connected['isConnected'] == True:
                 return render_template('movie.html', data=res, genres=genre, director_id=director_id, director_name=director_name, director_profile=director_profile, data_actors=act['Actors'], isInCollection=isInCollection['isInCollection'], nav=0)
             else:
-                return render_template('movie.html', data=res, genres=genre, director_id=director_id, director_name=director_name, director_profile=director_profile, data_actors=act['Actors'], isInCollection=isInCollection['isInCollection'], nav=1)
+                return render_template('movie.html', data=res, genres=genre, director_id=director_id, director_name=director_name, director_profile=director_profile, data_actors=act['Actors'], nav=1)
 
 @movie.route('/person/<id>', methods=['GET'])
 def person_(id):

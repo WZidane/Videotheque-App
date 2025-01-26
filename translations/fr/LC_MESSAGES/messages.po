@@ -1,14 +1,14 @@
 # French translations for PROJECT.
-# Copyright (C) 2024 ORGANIZATION
+# Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-12-18 10:53+0000\n"
-"PO-Revision-Date: 2024-12-16 17:30+0000\n"
+"POT-Creation-Date: 2025-01-26 09:17+0000\n"
+"PO-Revision-Date: 2025-01-26 09:13+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -18,155 +18,265 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.16.0\n"
 
-#: templates/catalog.html:5 templates/catalog.html:15 templates/nav.html:26
-msgid "Catalog"
-msgstr "Catalogue"
-
-#: templates/catalog.html:18
-msgid "Looking for a movie"
-msgstr "Rechercher un film, un acteur..."
-
-#: templates/catalog.html:19 templates/nav.html:19
-msgid "Search"
-msgstr "Rechercher"
-
-#: templates/contact.html:5 templates/contact.html:17
-msgid "Contact"
-msgstr "Contactez-nous"
-
-#: templates/contact.html:18
-msgid "Please contact us"
-msgstr "Veuillez remplir ce formulaire pour nous contacter."
-
-#: templates/contact.html:23 templates/contact.html:24
-msgid "First Name"
-msgstr "Prénom"
-
-#: templates/contact.html:31 templates/contact.html:32
-msgid "Last Name"
-msgstr "Nom"
-
-#: templates/contact.html:39 templates/contact.html:40 templates/login.html:23
-#: templates/login.html:24 templates/register.html:31
-#: templates/register.html:32
-msgid "Email"
-msgstr "Adresse e-mail"
-
-#: templates/contact.html:46
-msgid "Message"
-msgstr "Message"
-
-#: templates/contact.html:50
-msgid "Send"
-msgstr "Envoyer !"
-
-#: templates/footer.html:3 templates/index.html:5
-msgid "Homepage"
-msgstr "Accueil"
-
-#: templates/footer.html:4
-msgid "Contact us"
-msgstr "Contactez-nous"
-
-#: templates/footer.html:5 templates/register.html:59
-msgid "ToS"
-msgstr "Politique de confidentialité"
-
-#: templates/footer.html:7
-msgid "Rights"
-msgstr "© 2024 Moviefy, tous droits réservés."
-
-#: templates/index.html:17
-msgid "Welcome"
-msgstr "Bienvenue,"
-
-#: templates/index.html:18
-msgid "Stay here"
-msgstr "Chez votre vidéothèque préférée !"
-
-#: templates/index.html:23
-msgid "Trends"
-msgstr "Tendances"
-
-#: templates/index.html:29
-msgid "Subscribe to us"
-msgstr "Venez découvrir toutes nos nouveautés ! Restez informer !"
-
-#: templates/index.html:30
-msgid "Subscribe"
-msgstr "Je m'abonne !"
-
-#: templates/login.html:5 templates/login.html:17 templates/login.html:37
-#: templates/nav.html:46
+#: blueprints/auth/templates/login.html:5
+#: blueprints/auth/templates/login.html:17
+#: blueprints/auth/templates/login.html:43 blueprints/templates/nav.html:45
 msgid "Login"
 msgstr "Connexion"
 
-#: templates/login.html:18
+#: blueprints/auth/templates/login.html:18
 msgid "Please login"
 msgstr "Veuillez remplir ce formulaire pour vous connecter."
 
-#: templates/login.html:31 templates/login.html:32 templates/register.html:40
-#: templates/register.html:41
+#: blueprints/auth/templates/login.html:23
+#: blueprints/auth/templates/login.html:24
+#: blueprints/auth/templates/signup.html:31
+#: blueprints/auth/templates/signup.html:32
+#: blueprints/contact/templates/contact.html:43
+#: blueprints/contact/templates/contact.html:44
+#: blueprints/home/templates/home.html:38
+#: blueprints/home/templates/home.html:39
+msgid "Email"
+msgstr "Adresse e-mail"
+
+#: blueprints/auth/templates/login.html:31
+#: blueprints/auth/templates/login.html:32
+#: blueprints/auth/templates/signup.html:40
+#: blueprints/auth/templates/signup.html:41
 msgid "Password"
 msgstr "Mot de passe"
 
-#: templates/login.html:42
+#: blueprints/auth/templates/login.html:48
 msgid "Don't have an account"
 msgstr "Vous n'avez pas de compte ?"
 
-#: templates/login.html:43
+#: blueprints/auth/templates/login.html:49
 msgid "Sign up then"
 msgstr "Je m'inscris !"
 
-#: templates/nav.html:14
-msgid "Title"
-msgstr "Titre"
+#: blueprints/auth/templates/profile.html:5
+msgid "UserName"
+msgstr "Profil"
 
-#: templates/nav.html:15
-msgid "Actors"
-msgstr "Acteurs"
+#: blueprints/auth/templates/profile.html:27
+msgid "collection"
+msgstr "Ma Collection"
 
-#: templates/nav.html:16
-msgid "Director"
-msgstr "Réalisateurs"
+#: blueprints/auth/templates/profile.html:42
+msgid "delete_movie"
+msgstr "Supprimer ce film"
 
-#: templates/nav.html:35
-msgid "French"
-msgstr "FR"
+#: blueprints/auth/templates/register.html:5
+msgid "ConfirmUser"
+msgstr "Compte crée !"
 
-#: templates/nav.html:40
-msgid "English"
-msgstr "EN"
+#: blueprints/auth/templates/register.html:17
+msgid "Votre compte a bien été crée."
+msgstr "Votre compte a bien été crée !"
 
-#: templates/nav.html:45 templates/register.html:5 templates/register.html:17
+#: blueprints/auth/templates/register.html:19
+msgid "Veuillez vous connecter !"
+msgstr "Veuillez vous connecter !"
+
+#: blueprints/auth/templates/signup.html:5
+#: blueprints/auth/templates/signup.html:17 blueprints/templates/nav.html:44
 msgid "Register"
 msgstr "Inscription"
 
-#: templates/register.html:18
+#: blueprints/auth/templates/signup.html:18
 msgid "Please sign up"
 msgstr "Veuillez remplir ce formulaire pour créer votre compte."
 
-#: templates/register.html:23 templates/register.html:24
+#: blueprints/auth/templates/signup.html:23
+#: blueprints/auth/templates/signup.html:24
 msgid "Username"
 msgstr "Nom d'utilisateur"
 
-#: templates/register.html:49 templates/register.html:50
-msgid "Password Repeat"
-msgstr "Confirmer votre mot de passe"
-
-#: templates/register.html:59
+#: blueprints/auth/templates/signup.html:51
 msgid "You accept"
 msgstr "En créant un compte vous acceptez notre"
 
-#: templates/register.html:61
+#: blueprints/auth/templates/signup.html:51 blueprints/templates/footer.html:5
+msgid "ToS"
+msgstr "Politique de confidentialité"
+
+#: blueprints/auth/templates/signup.html:53
 msgid "Sign up"
 msgstr "S'inscrire"
 
-#: templates/register.html:66
+#: blueprints/auth/templates/signup.html:58
 msgid "Already have an account"
 msgstr "Vous avez déjà un compte ?"
 
-#: templates/register.html:67
+#: blueprints/auth/templates/signup.html:59
 msgid "Login then"
 msgstr "Connectez-vous !"
+
+#: blueprints/catalog/templates/catalog.html:5
+#: blueprints/catalog/templates/catalog.html:19
+#: blueprints/templates/nav.html:25 blueprints/templates/nav_connected.html:25
+msgid "Catalog"
+msgstr "Catalogue"
+
+#: blueprints/catalog/templates/catalog.html:24
+#: blueprints/templates/nav.html:14 blueprints/templates/nav_connected.html:14
+msgid "Title"
+msgstr "Titre"
+
+#: blueprints/catalog/templates/catalog.html:25
+#: blueprints/templates/nav.html:15 blueprints/templates/nav_connected.html:15
+msgid "Actors"
+msgstr "Acteurs"
+
+#: blueprints/catalog/templates/catalog.html:26
+#: blueprints/templates/nav.html:16 blueprints/templates/nav_connected.html:16
+msgid "Director"
+msgstr "Réalisateur"
+
+#: blueprints/catalog/templates/catalog.html:29
+msgid "Looking for a movie"
+msgstr "Rechercher un film, un acteur..."
+
+#: blueprints/contact/templates/contact.html:5
+#: blueprints/contact/templates/contact.html:21
+msgid "Contact"
+msgstr "Contactez-nous"
+
+#: blueprints/contact/templates/contact.html:22
+msgid "Please contact us"
+msgstr "Veuillez remplir ce formulaire pour nous contacter."
+
+#: blueprints/contact/templates/contact.html:27
+#: blueprints/contact/templates/contact.html:28
+msgid "First Name"
+msgstr "Prénom"
+
+#: blueprints/contact/templates/contact.html:35
+#: blueprints/contact/templates/contact.html:36
+msgid "Last Name"
+msgstr "Nom"
+
+#: blueprints/contact/templates/contact.html:50
+msgid "Message"
+msgstr "Message"
+
+#: blueprints/contact/templates/contact.html:54
+msgid "Send"
+msgstr "Envoyer !"
+
+#: blueprints/home/templates/home.html:5 blueprints/templates/footer.html:3
+msgid "Homepage"
+msgstr "Accueil"
+
+#: blueprints/home/templates/home.html:21
+msgid "Welcome"
+msgstr "Bienvenue,"
+
+#: blueprints/home/templates/home.html:22
+msgid "Stay here"
+msgstr "Chez votre vidéothèque préférée !"
+
+#: blueprints/home/templates/home.html:27
+msgid "Trends"
+msgstr "Tendances"
+
+#: blueprints/home/templates/home.html:34
+msgid "Subscribe to us"
+msgstr "Venez découvrir toutes nos nouveautés ! Restez informer !"
+
+#: blueprints/home/templates/home.html:41
+msgid "Subscribe"
+msgstr "Je m'abonne !"
+
+#: blueprints/movie/templates/movie.html:5
+msgid "Movie"
+msgstr "Film"
+
+#: blueprints/movie/templates/movie.html:24
+msgid "Movie Poster"
+msgstr "Image du film"
+
+#: blueprints/movie/templates/movie.html:39
+msgid "add to collection"
+msgstr "Ajouter à la collection"
+
+#: blueprints/movie/templates/movie.html:45
+msgid "synopsis"
+msgstr "Synopsis :"
+
+#: blueprints/movie/templates/movie.html:57
+msgid "genre"
+msgstr "Genres :"
+
+#: blueprints/movie/templates/movie.html:61
+msgid "country"
+msgstr "Pays :"
+
+#: blueprints/movie/templates/movie.html:64
+msgid "release_date"
+msgstr "Date de sortie :"
+
+#: blueprints/movie/templates/movie.html:67
+msgid "director"
+msgstr "Réalisateur :"
+
+#: blueprints/movie/templates/movie.html:81
+msgid "actors"
+msgstr "Acteurs :"
+
+#: blueprints/movie/templates/person.html:5
+msgid "Person"
+msgstr "Informations"
+
+#: blueprints/movie/templates/person.html:32
+msgid "bio"
+msgstr "Biographie :"
+
+#: blueprints/movie/templates/person.html:37
+msgid "birth"
+msgstr "Date de naissance :"
+
+#: blueprints/movie/templates/person.html:43
+msgid "death"
+msgstr "Date de mort :"
+
+#: blueprints/movie/templates/person.html:48
+msgid "job"
+msgstr "Métier :"
+
+#: blueprints/movie/templates/person.html:56
+msgid "place_of_birth"
+msgstr "Lieu de naissance :"
+
+#: blueprints/movie/templates/person.html:59
+msgid "movies"
+msgstr "Films :"
+
+#: blueprints/templates/footer.html:4
+msgid "Contact us"
+msgstr "Contactez-nous"
+
+#: blueprints/templates/footer.html:7
+msgid "Rights"
+msgstr "© 2025 Moviefy, tous droits réservés."
+
+#: blueprints/templates/nav.html:19 blueprints/templates/nav_connected.html:19
+msgid "Search"
+msgstr "Rechercher..."
+
+#: blueprints/templates/nav.html:34 blueprints/templates/nav_connected.html:34
+msgid "French"
+msgstr "FR"
+
+#: blueprints/templates/nav.html:39 blueprints/templates/nav_connected.html:39
+msgid "English"
+msgstr "EN"
+
+#: blueprints/templates/nav_connected.html:44
+msgid "Profile"
+msgstr "Profil"
+
+#: blueprints/templates/nav_connected.html:45
+msgid "Deconnexion"
+msgstr "Déconnexion"
 
